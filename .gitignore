@@ -1,0 +1,8 @@
+packages/
+SitecoreCoffee/bin/
+SitecoreCoffee/obj/
+RemoteEvents/RemoteEvents/obj/
+*.suo
+.vs/
+RemoteEvents/RemoteEvents/bin/
+*.user
