@@ -3,9 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SitecoreCoffee", "SitecoreCoffee\SitecoreCoffee.csproj", "{97746287-569A-4B33-AAB1-266E1C1EE81D}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Feature", "Feature", "{2BFD7FF4-5AAE-495B-B5A6-528011E6834D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SitecoreCoffee.RemoteEvents", "RemoteEvents\RemoteEvents\SitecoreCoffee.RemoteEvents.csproj", "{F8FF7940-C887-4380-B22A-64D9EBA17A1B}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Foundation", "Foundation", "{FB68DD27-717D-444C-A48C-10EB1F3C4521}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Project", "Project", "{B96DE32E-5D4E-4960-A008-BCE603477D10}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configuration", "Configuration", "{5697E18F-1B18-464B-876A-F36A9C092387}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SitecoreCoffee", "Project\SitecoreCoffee\SitecoreCoffee.csproj", "{97746287-569A-4B33-AAB1-266E1C1EE81D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SitecoreCoffee.RemoteEvents", "Foundation\RemoteEvents\SitecoreCoffee.RemoteEvents.csproj", "{F8FF7940-C887-4380-B22A-64D9EBA17A1B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,5 +32,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{97746287-569A-4B33-AAB1-266E1C1EE81D} = {B96DE32E-5D4E-4960-A008-BCE603477D10}
+		{F8FF7940-C887-4380-B22A-64D9EBA17A1B} = {FB68DD27-717D-444C-A48C-10EB1F3C4521}
 	EndGlobalSection
 EndGlobal
