@@ -48,7 +48,6 @@
     <Compile Include="CacheRebuildEventArgs.cs" />
     <Compile Include="CacheRebuildEventRaiser.cs" />
     <Compile Include="CacheRebuildEventRemote.cs" />
-    <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
