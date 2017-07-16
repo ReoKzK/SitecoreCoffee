@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration xmlns:patch="http://www.sitecore.net/xmlconfig/">
+  <sitecore>
+    <contentSearch>
+      <configuration type="Sitecore.ContentSearch.ContentSearchConfiguration, Sitecore.ContentSearch">
+        <indexes hint="list:AddIndex">
+          <index id="products_index" type="Sitecore.ContentSearch.SolrProvider.SolrSearchIndex, Sitecore.ContentSearch.SolrProvider">
+            <param desc="name">$(id)</param>
+            <param desc="core">(id)</param>
+            <param desc="propertyStore" ref="contentSearch/indexConfigurations/databasePropertyStore" param1="$(id)" />
+            
+            <configuration ref="contentSearch/indexConfigurations/defaultSolrIndexConfiguration">
+              <indexAllFields>true</indexAllFields>
+
+              <!-- Field mapping -->
+              <fieldMap type="Sitecore.ContentSearch.FieldMap, Sitecore.ContentSearch">
+                <fieldNames hint="raw:AddFieldByFieldName">
+
+                  <field fieldName="id" returnType="string" />
+
+                  <field fieldName="name" returnType="string" />
+
+                  <field fieldName="description" returnType="string" />
+
+                  <field fieldName="price" returnType="double" />
+
+                  <field fieldName="pricecurrency" returnType="string" />
+
+                </fieldNames>
+              </fieldMap>
+          </configuration>
+            
+            <strategies hint="list:AddStrategy">
+              <strategy ref="contentSearch/indexConfigurations/indexUpdateStrategies/manual" />
+            </strategies>
+
+            <locations hint="list:AddCrawler">
+              <crawler type="SitecoreCoffee.Foundation.ProductsSearch.Crawlers.ProductsCrawler, SitecoreCoffee.Foundation.ProductsSearch"></crawler>
+            </locations>
+
+            <enableItemLanguageFallback>false</enableItemLanguageFallback>
+            <enableFieldLanguageFallback>false</enableFieldLanguageFallback>
+          </index>
+        </indexes>
+      </configuration>
+    </contentSearch>
+  </sitecore>
+</configuration>

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.15
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Feature", "Feature", "{2BFD7FF4-5AAE-495B-B5A6-528011E6834D}"
 EndProject
@@ -10,10 +10,29 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Project", "Project", "{B96DE32E-5D4E-4960-A008-BCE603477D10}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configuration", "Configuration", "{5697E18F-1B18-464B-876A-F36A9C092387}"
+	ProjectSection(SolutionItems) = preProject
+		gulp-config.js = gulp-config.js
+		gulpfile.js = gulpfile.js
+		package.json = package.json
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SitecoreCoffee", "Project\SitecoreCoffee\SitecoreCoffee.csproj", "{97746287-569A-4B33-AAB1-266E1C1EE81D}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ProductsSearch", "ProductsSearch", "{B6FE30FE-DB8A-4147-920F-9AF3FB4B32CA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SitecoreCoffee.RemoteEvents", "Foundation\RemoteEvents\SitecoreCoffee.RemoteEvents.csproj", "{F8FF7940-C887-4380-B22A-64D9EBA17A1B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SitecoreCoffee.Foundation.ProductsSearch", "src\Foundation\ProductsSearch\code\SitecoreCoffee.Foundation.ProductsSearch.csproj", "{E4AF9230-D79B-46B5-8656-43ED1986E1EA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SitecoreCoffee", "SitecoreCoffee", "{BAD9B43B-1E9B-42DE-BF9D-4EC49C553427}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SitecoreCoffee.Project.SitecoreCoffee", "src\Project\SitecoreCoffee\code\SitecoreCoffee.Project.SitecoreCoffee.csproj", "{50C12BEC-D68A-4E17-8C2E-E3BB2CDE806F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "scripts", "scripts", "{24DAC2FA-57EF-4E25-A815-E1B8815A1A3F}"
+	ProjectSection(SolutionItems) = preProject
+		scripts\sitecorecoffee.js = scripts\sitecorecoffee.js
+		scripts\unicorn.js = scripts\unicorn.js
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RemoteEvents", "RemoteEvents", "{2E28E3A6-C1F1-4A6B-A642-C109D30FA253}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SitecoreCoffee.Foundation.RemoteEvents", "src\Foundation\RemoteEvents\code\SitecoreCoffee.Foundation.RemoteEvents.csproj", "{DD739713-B8AC-44BD-8EE9-5F9D0D6B4ADB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,20 +40,29 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{97746287-569A-4B33-AAB1-266E1C1EE81D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{97746287-569A-4B33-AAB1-266E1C1EE81D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{97746287-569A-4B33-AAB1-266E1C1EE81D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{97746287-569A-4B33-AAB1-266E1C1EE81D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F8FF7940-C887-4380-B22A-64D9EBA17A1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F8FF7940-C887-4380-B22A-64D9EBA17A1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F8FF7940-C887-4380-B22A-64D9EBA17A1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F8FF7940-C887-4380-B22A-64D9EBA17A1B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4AF9230-D79B-46B5-8656-43ED1986E1EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4AF9230-D79B-46B5-8656-43ED1986E1EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4AF9230-D79B-46B5-8656-43ED1986E1EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4AF9230-D79B-46B5-8656-43ED1986E1EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50C12BEC-D68A-4E17-8C2E-E3BB2CDE806F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50C12BEC-D68A-4E17-8C2E-E3BB2CDE806F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50C12BEC-D68A-4E17-8C2E-E3BB2CDE806F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50C12BEC-D68A-4E17-8C2E-E3BB2CDE806F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD739713-B8AC-44BD-8EE9-5F9D0D6B4ADB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD739713-B8AC-44BD-8EE9-5F9D0D6B4ADB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD739713-B8AC-44BD-8EE9-5F9D0D6B4ADB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD739713-B8AC-44BD-8EE9-5F9D0D6B4ADB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{97746287-569A-4B33-AAB1-266E1C1EE81D} = {B96DE32E-5D4E-4960-A008-BCE603477D10}
-		{F8FF7940-C887-4380-B22A-64D9EBA17A1B} = {FB68DD27-717D-444C-A48C-10EB1F3C4521}
+		{B6FE30FE-DB8A-4147-920F-9AF3FB4B32CA} = {FB68DD27-717D-444C-A48C-10EB1F3C4521}
+		{E4AF9230-D79B-46B5-8656-43ED1986E1EA} = {B6FE30FE-DB8A-4147-920F-9AF3FB4B32CA}
+		{BAD9B43B-1E9B-42DE-BF9D-4EC49C553427} = {B96DE32E-5D4E-4960-A008-BCE603477D10}
+		{50C12BEC-D68A-4E17-8C2E-E3BB2CDE806F} = {BAD9B43B-1E9B-42DE-BF9D-4EC49C553427}
+		{24DAC2FA-57EF-4E25-A815-E1B8815A1A3F} = {5697E18F-1B18-464B-876A-F36A9C092387}
+		{2E28E3A6-C1F1-4A6B-A642-C109D30FA253} = {FB68DD27-717D-444C-A48C-10EB1F3C4521}
+		{DD739713-B8AC-44BD-8EE9-5F9D0D6B4ADB} = {2E28E3A6-C1F1-4A6B-A642-C109D30FA253}
 	EndGlobalSection
 EndGlobal
