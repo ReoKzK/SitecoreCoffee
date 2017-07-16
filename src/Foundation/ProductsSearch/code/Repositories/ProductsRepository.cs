@@ -11,7 +11,7 @@ namespace SitecoreCoffee.Foundation.ProductsSearch.Repositories
 
         public ProductsRepository()
         {
-            _productsService = new ProductsService();
+            _productsService = new ProductsMockService();
         }
 
         public ProductsRepository(IProductsService productsService)

@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace SitecoreCoffee.Foundation.ProductsSearch.Services
 {
-    public class ProductsService : IProductsService
+    public class ProductsMockService : IProductsService
     {
         private IEnumerable<Product> _productsMock = new List<Product>()
         {
