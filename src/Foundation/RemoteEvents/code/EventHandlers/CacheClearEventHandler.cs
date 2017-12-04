@@ -3,6 +3,7 @@ using Sitecore.Events;
 using Sitecore.Pipelines;
 using Sitecore.Publishing;
 using Sitecore.Publishing.Pipelines.PublishItem;
+using SitecoreCoffee.Foundation.RemoteEvents.Events;
 using System;
 using System.Diagnostics;
 
@@ -11,44 +12,10 @@ namespace SitecoreCoffee.Foundation.RemoteEvents.EventHandlers
     public class CacheClearEventHandler
     {
         /// <summary>
-        /// Event name (local)
-        /// </summary>
-        public static readonly String EventName = "customCache:rebuild";
-
-        /// <summary>
-        /// Event name (remote)
-        /// </summary>
-        public static readonly String EventNameRemote = EventName + ":remote";
-
-        /// <summary>
         /// Static flag that indicates if any specific item was published
         /// </summary>
         protected static bool SpecificItemWasPublished = false;
-
-        /// <summary>
-        /// Specific item template ID
-        /// </summary>
-        protected const String SpecificItemTemplateId = "{54237CC1-6502-4873-9580-A2F6141D482F}";
-
-        /// <summary>
-        /// Initializes event subscription
-        /// </summary>
-        /// <param name="args">Args</param>
-        public virtual void InitializeFromPipeline(PipelineArgs args)
-        {
-            var action = new Action<CacheRebuildEventRemote>(RaiseRemoteEvent);
-            Sitecore.Eventing.EventManager.Subscribe<CacheRebuildEventRemote>(action);
-        }
-
-        /// <summary>
-        /// Raises remote event
-        /// </summary>
-        /// <param name="hotelsCacheRebuildEvent"></param>
-        private void RaiseRemoteEvent(CacheRebuildEventRemote cacheRebuildEvent)
-        {
-            Sitecore.Events.Event.RaiseEvent(EventNameRemote);
-        }
-
+        
         /// <summary>
         /// Method fired up while item processing finished (while publishing)
         /// </summary>
@@ -61,7 +28,7 @@ namespace SitecoreCoffee.Foundation.RemoteEvents.EventHandlers
 
             if (context != null && context.VersionToPublish != null)
             {
-                if (context.VersionToPublish.TemplateID.ToString() == SpecificItemTemplateId)
+                if (context.VersionToPublish.TemplateID.ToString() == Constants.SpecificItemTemplateId)
                 {
                     SpecificItemWasPublished = true;
                 }
@@ -105,14 +72,17 @@ namespace SitecoreCoffee.Foundation.RemoteEvents.EventHandlers
 
             try
             {
+                var eventInfo = Event.ExtractParameter(args, 0) as CacheRebuildEvent;
+                // check for full rebuild
+
                 //if (publisher.Options.RootItem.TemplateID.ToString() == HotelTemplateId || (publisher.Options.Mode != PublishMode.SingleItem && publisher.Options.RootItem.Axes.GetDescendants().Any(x => x.TemplateID.ToString() == HotelTemplateId)))
 
                 //|| (eventArgs.EventName == "publish:end:remote"
                 //        && (publisher.Options.RootItem.TemplateID.ToString() == HotelTemplateId
                 //            || (publisher.Options.Mode != PublishMode.SingleItem && publisher.Options.RootItem.Axes.GetDescendants().Any(x => x.TemplateID.ToString() == HotelTemplateId))))
-                
-                Log.Info("CacheClearEventHandler: Clearing the hotel cache.", this);
-                
+
+                Log.Info("CacheClearEventHandler: Clearing the cache.", this);
+
                 // - Here clear the cache -
 
                 timeElapsed = stopWatch.ElapsedMilliseconds;
@@ -126,7 +96,6 @@ namespace SitecoreCoffee.Foundation.RemoteEvents.EventHandlers
             finally
             {
                 stopWatch.Stop();
-                Log.Info("CacheClearEventHandler: Clearing the hotel cache finished in " + timeElapsed + "ms", this);
             }
         }
     }

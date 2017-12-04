@@ -1,13 +1,21 @@
-﻿namespace SitecoreCoffee.Foundation.RemoteEvents
+﻿using SitecoreCoffee.Foundation.RemoteEvents.Events;
+
+namespace SitecoreCoffee.Foundation.RemoteEvents
 {
     public class CacheRebuildEventRaiser
     {
         public void RaiseEvent()
         {
-            var parameters = new object[] { new CacheRebuildEventArgs() };
+            var @event = new CacheRebuildEvent();
+            RaiseEvent(@event);
+        }
 
-            Sitecore.Events.Event.RaiseEvent(CacheClearEventHandler.EventName);
-            Sitecore.Eventing.EventManager.QueueEvent<CacheRebuildEventArgs>(new CacheRebuildEventArgs());
+        public void RaiseEvent(CacheRebuildEvent @event)
+        {
+            var eventArgs = new object[] { new CacheRebuildEventArgs(@event) };
+
+            Sitecore.Events.Event.RaiseEvent(Constants.CustomCacheRebuildEventName, eventArgs);
+            Sitecore.Eventing.EventManager.QueueEvent<CacheRebuildEvent>(@event);
         }
     }
 }
