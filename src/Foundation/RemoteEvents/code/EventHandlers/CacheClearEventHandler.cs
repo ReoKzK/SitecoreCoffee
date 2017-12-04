@@ -6,6 +6,7 @@ using Sitecore.Publishing.Pipelines.PublishItem;
 using SitecoreCoffee.Foundation.RemoteEvents.Events;
 using System;
 using System.Diagnostics;
+using SitecoreCoffee.Foundation.RemoteEvents.EventRaisers;
 
 namespace SitecoreCoffee.Foundation.RemoteEvents.EventHandlers
 {
@@ -24,9 +25,9 @@ namespace SitecoreCoffee.Foundation.RemoteEvents.EventHandlers
         public void ItemProcessed(object sender, EventArgs args)
         {
             ItemProcessedEventArgs itemProcessedEventArgs = args as ItemProcessedEventArgs;
-            PublishItemContext context = itemProcessedEventArgs != null ? itemProcessedEventArgs.Context : null;
+            PublishItemContext context = itemProcessedEventArgs?.Context;
 
-            if (context != null && context.VersionToPublish != null)
+            if (context?.VersionToPublish != null)
             {
                 if (context.VersionToPublish.TemplateID.ToString() == Constants.SpecificItemTemplateId)
                 {

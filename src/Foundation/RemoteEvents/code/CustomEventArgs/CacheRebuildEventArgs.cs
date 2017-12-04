@@ -1,8 +1,8 @@
-﻿using Sitecore.Events;
+﻿using System;
+using Sitecore.Events;
 using SitecoreCoffee.Foundation.RemoteEvents.Events;
-using System;
 
-namespace SitecoreCoffee.Foundation.RemoteEvents
+namespace SitecoreCoffee.Foundation.RemoteEvents.CustomEventArgs
 {
     public class CacheRebuildEventArgs : EventArgs, IPassNativeEventArgs
     {

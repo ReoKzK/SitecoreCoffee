@@ -98,8 +98,8 @@
     <None Include="Properties\PublishProfiles\Local.pubxml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CacheRebuildEventArgs.cs" />
-    <Compile Include="CacheRebuildEventRaiser.cs" />
+    <Compile Include="CustomEventArgs\CacheRebuildEventArgs.cs" />
+    <Compile Include="EventRaisers\CacheRebuildEventRaiser.cs" />
     <Compile Include="Constants.cs" />
     <Compile Include="Events\CacheRebuildEvent.cs" />
     <Compile Include="EventHandlers\CacheClearEventHandler.cs" />
@@ -109,9 +109,7 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="EventArgsModels\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

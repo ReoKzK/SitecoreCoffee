@@ -1,6 +1,7 @@
-﻿using SitecoreCoffee.Foundation.RemoteEvents.Events;
+﻿using SitecoreCoffee.Foundation.RemoteEvents.CustomEventArgs;
+using SitecoreCoffee.Foundation.RemoteEvents.Events;
 
-namespace SitecoreCoffee.Foundation.RemoteEvents
+namespace SitecoreCoffee.Foundation.RemoteEvents.EventRaisers
 {
     public class CacheRebuildEventRaiser
     {
