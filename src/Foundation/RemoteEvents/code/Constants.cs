@@ -17,6 +17,6 @@ namespace SitecoreCoffee.Foundation.RemoteEvents
         /// <summary>
         /// Specific item template ID
         /// </summary>
-        public const String SpecificItemTemplateId = "{54237CC1-6502-4873-9580-A2F6141D482F}";
+        public const String SpecificItemTemplateId = "{C8D96B72-A780-49FE-8769-34F1AC8DB1B5}";
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using Sitecore.Pipelines;
+using SitecoreCoffee.Foundation.RemoteEvents.CustomEventArgs;
 using SitecoreCoffee.Foundation.RemoteEvents.Events;
 
 namespace SitecoreCoffee.Foundation.RemoteEvents.Pipelines
@@ -22,7 +23,9 @@ namespace SitecoreCoffee.Foundation.RemoteEvents.Pipelines
         /// <param name="cacheRebuildEvent"></param>
         private void RaiseRemoteEvent(CacheRebuildEvent cacheRebuildEvent)
         {
-            Sitecore.Events.Event.RaiseEvent(Constants.CustomCacheRebuildEventNameRemote);
+            var eventArgs = new object[] { new CacheRebuildEventArgs(cacheRebuildEvent) };
+
+            Sitecore.Events.Event.RaiseEvent(Constants.CustomCacheRebuildEventNameRemote, eventArgs);
         }
     }
 }
