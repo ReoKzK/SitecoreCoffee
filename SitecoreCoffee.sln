@@ -34,6 +34,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RemoteEvents", "RemoteEvent
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SitecoreCoffee.Foundation.RemoteEvents", "src\Foundation\RemoteEvents\code\SitecoreCoffee.Foundation.RemoteEvents.csproj", "{DD739713-B8AC-44BD-8EE9-5F9D0D6B4ADB}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ApiIntegration", "ApiIntegration", "{C1DD37FD-92D0-4A61-AE70-2E0816605793}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SitecoreCoffee.Feature.ApiIntegration", "src\Feature\ApiIntegration\code\SitecoreCoffee.Feature.ApiIntegration.csproj", "{2F2E2BBF-368E-448D-8708-20195884443F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -52,6 +56,10 @@ Global
 		{DD739713-B8AC-44BD-8EE9-5F9D0D6B4ADB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DD739713-B8AC-44BD-8EE9-5F9D0D6B4ADB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DD739713-B8AC-44BD-8EE9-5F9D0D6B4ADB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F2E2BBF-368E-448D-8708-20195884443F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F2E2BBF-368E-448D-8708-20195884443F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F2E2BBF-368E-448D-8708-20195884443F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F2E2BBF-368E-448D-8708-20195884443F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -64,5 +72,7 @@ Global
 		{24DAC2FA-57EF-4E25-A815-E1B8815A1A3F} = {5697E18F-1B18-464B-876A-F36A9C092387}
 		{2E28E3A6-C1F1-4A6B-A642-C109D30FA253} = {FB68DD27-717D-444C-A48C-10EB1F3C4521}
 		{DD739713-B8AC-44BD-8EE9-5F9D0D6B4ADB} = {2E28E3A6-C1F1-4A6B-A642-C109D30FA253}
+		{C1DD37FD-92D0-4A61-AE70-2E0816605793} = {2BFD7FF4-5AAE-495B-B5A6-528011E6834D}
+		{2F2E2BBF-368E-448D-8708-20195884443F} = {C1DD37FD-92D0-4A61-AE70-2E0816605793}
 	EndGlobalSection
 EndGlobal
