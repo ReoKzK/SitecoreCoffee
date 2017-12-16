@@ -55,13 +55,12 @@ namespace SitecoreCoffee.Foundation.RemoteEvents.EventHandlers
 
             if (SpecificItemWasPublished)
             {
-                // - Clear cache -
+                // - Raise rebuild cache action -
                 var raiser = new CacheRebuildEventRaiser();
                 raiser.RaiseEvent(
                     new CacheRebuildEvent()
                     {
                         FullRebuild = true
-                        
                     });
 
                 // - Reset specific item published flag -
@@ -73,19 +72,18 @@ namespace SitecoreCoffee.Foundation.RemoteEvents.EventHandlers
         {
             Assert.IsNotNull(args, "Args");
 
-            var cacheRebuildArgs = args as CacheRebuildEventArgs;
-
             var stopWatch = new Stopwatch();
             stopWatch.Start();
 
             try
             {
+                var cacheRebuildArgs = args as CacheRebuildEventArgs;
+
                 Log.Info("CacheRebuildEventHandler: Rebuilding the cache.", this);
 
                 var eventInfo = cacheRebuildArgs.EventInfo;
 
                 var rebuildService = new CacheRebuildService();
-                
                 rebuildService.Rebuild(eventInfo.FullRebuild);
 
                 stopWatch.Stop();
