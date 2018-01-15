@@ -1,8 +1,8 @@
 ---
-ID: "c717d4ab-f994-4c04-bf03-afde42d7810f"
-Parent: "1995806f-0a84-42b5-93b0-88f0e2ff872c"
+ID: "30739cb9-2d59-4902-9341-cf887377e389"
+Parent: "da61ad50-8fdb-4252-a68f-b4470b1c9fe8"
 Template: "7ee0975b-0698-493e-b3a2-0b2ef33d0522"
-Path: /sitecore/layout/Renderings/Project/SitecoreCoffee
+Path: /sitecore/layout/Renderings/Feature/Commerce
 DB: master
 Languages:
 - Language: en

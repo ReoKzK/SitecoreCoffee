@@ -1,0 +1,14 @@
+﻿---
+ID: "5e61ada2-e7b7-4c5a-9b07-dcf456752ebf"
+Parent: "7f37a890-144b-432f-882f-443550203327"
+Template: "7ee0975b-0698-493e-b3a2-0b2ef33d0522"
+Path: /sitecore/layout/Renderings/Project/SitecoreCoffee
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20170812T201708Z
