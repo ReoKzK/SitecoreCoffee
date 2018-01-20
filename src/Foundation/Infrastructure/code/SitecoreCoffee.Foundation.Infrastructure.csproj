@@ -48,6 +48,9 @@
       <HintPath>..\..\..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=1.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\Microsoft.Extensions.DependencyInjection.Abstractions.1.0.0\lib\netstandard1.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
     <Reference Include="Sitecore.Kernel, Version=10.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\..\..\packages\Sitecore.Kernel.NoReferences.8.2.171121\lib\NET452\Sitecore.Kernel.dll</HintPath>
     </Reference>
@@ -94,11 +97,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Config\Include\Foundation\SitecoreCoffee.Foundation.Infrastructure.config" />
+    <Content Include="App_Config\Include\Foundation\SitecoreCoffee.Foundation.Infrastructure.RegisterContainer.config" />
     <None Include="Properties\PublishProfiles\Local.pubxml" />
     <None Include="\README.md" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DI\RegisterContainer.cs" />
+    <Compile Include="DI\ServiceCollectionExtensions.cs" />
+    <Compile Include="DI\ServiceCollection\DefaultDependencyResolver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
