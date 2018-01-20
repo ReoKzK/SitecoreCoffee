@@ -1,6 +1,6 @@
----
-ID: "30739cb9-2d59-4902-9341-cf887377e389"
-Parent: "da61ad50-8fdb-4252-a68f-b4470b1c9fe8"
+﻿---
+ID: "217f2086-3ef9-46da-bdf6-33d23fb69574"
+Parent: "85d2e7ad-8f8d-4bf3-8151-df7b833f5a9b"
 Template: "7ee0975b-0698-493e-b3a2-0b2ef33d0522"
 Path: /sitecore/layout/Renderings/Feature/Commerce
 DB: master
@@ -11,7 +11,4 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20170101T00000Z
-    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
-      Hint: __Created by
-      Value: sitecore\admin
+      Value: 20180120T204759Z

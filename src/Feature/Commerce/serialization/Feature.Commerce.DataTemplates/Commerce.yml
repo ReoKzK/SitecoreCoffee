@@ -1,6 +1,6 @@
----
-ID: "8ac4b770-9d24-44dd-8df0-cffe67b17716"
-Parent: "8f343079-3cc5-4ef7-bc27-32addb46f45e"
+﻿---
+ID: "7aeb2624-b8e8-4106-8cb4-1dfc8bb6d3f4"
+Parent: "e0ebb0aa-a453-4e1e-a39c-b54ad91d1486"
 Template: "0437fee2-44c9-46a6-abe9-28858d9fee8c"
 Path: /sitecore/templates/Feature/Commerce
 DB: master
@@ -11,7 +11,8 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20170101T00000Z
+      Value: 20180120T204733Z
     - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
       Hint: __Created by
-      Value: sitecore\admin
+      Value: |
+        sitecore\admin
