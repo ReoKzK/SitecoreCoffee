@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("SitecoreCoffee.Foundation.Search")]
+[assembly: AssemblyTitle("SitecoreCoffee.Feature.Search")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("SitecoreCoffee.Foundation.Search")]
-[assembly: AssemblyCopyright("Copyright ©  2017")]
+[assembly: AssemblyProduct("SitecoreCoffee.Feature.Search")]
+[assembly: AssemblyCopyright("Copyright Â©  2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("fa2df57b-607a-4c25-b18a-5e8bfd4ba885")]
+[assembly: Guid("06411d0e-5638-4d8b-913f-96d86c925382")]
 
 // Version information for an assembly consists of the following four values:
 //

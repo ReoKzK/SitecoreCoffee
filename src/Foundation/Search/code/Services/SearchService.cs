@@ -8,16 +8,13 @@ using System.Linq;
 
 namespace SitecoreCoffee.Foundation.Search.Services
 {
-    public class SearchService
+    public class SearchService : ISearchService
     {
         public List<Item> SearchItems(String indexName, String content, Language language = null)
         {
-            var resultItems = new List<Item>();
+            List<Item> resultItems;
 
-            if (language == null)
-            {
-                language = Sitecore.Context.Language;
-            }
+            language = language ?? Sitecore.Context.Language;
 
             var index = ContentSearchManager.GetIndex(indexName);
 
@@ -37,12 +34,9 @@ namespace SitecoreCoffee.Foundation.Search.Services
 
         public List<SearchResultItem> Search(String indexName, String content, Language language = null)
         {
-            var resultItems = new List<SearchResultItem>();
-
-            if (language == null)
-            {
-                language = Sitecore.Context.Language;
-            }
+            List<SearchResultItem> resultItems;
+            
+            language = language ?? Sitecore.Context.Language;
 
             var index = ContentSearchManager.GetIndex(indexName);
 
