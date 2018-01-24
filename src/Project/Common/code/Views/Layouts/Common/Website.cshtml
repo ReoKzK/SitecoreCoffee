@@ -1,0 +1,35 @@
+﻿@{
+    //Do not move this without understanding why is needs to be before the telium data later
+    //https://jermdavis.wordpress.com/2016/04/04/getting-mvc-components-to-communicate/
+    var pageContent = Html.Sitecore().Placeholder("pagecontent");
+}
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    @*<title>@(Model.PageTitle)</title>*@
+
+    @Html.Sitecore().VisitorIdentification()
+</head>
+
+<body>
+    <header>
+    </header>
+
+    <main>
+        <header>
+            @Html.Sitecore().Placeholder("headercontent")
+        </header>
+
+        <section>
+            @pageContent
+        </section>
+    </main>
+
+    <footer>
+        @Html.Sitecore().Placeholder("footercontent")
+    </footer>
+</body>
+</html>

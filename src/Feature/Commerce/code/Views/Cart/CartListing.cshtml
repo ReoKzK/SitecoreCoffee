@@ -1,0 +1,40 @@
+﻿@model SitecoreCoffee.Feature.Commerce.ViewModel.CartViewModel
+
+<div>
+    <div>
+        <strong>Name:</strong>
+        @Model.Cart.Name
+    </div>
+    <div>
+        <strong>TotalAmount:</strong>
+        @Model.Cart.TotalAmount
+    </div>
+    <div>
+        <strong>IsPopulated:</strong>
+        @Model.Cart.IsPopulated
+    </div>
+    <div>
+        <strong>Products: @Model.Cart.Products.Count</strong>
+        
+        @foreach (var product in Model.Cart.Products)
+        {
+            <div>
+                <p>@product.Name</p>
+                <p>@product.Price</p>
+            </div>
+        }
+    </div>
+    <div>
+        <strong>ShopName:</strong>
+        @Model.Cart.Info.ShopName
+    </div>
+    <div>
+        <strong>ExternalId:</strong>
+        @Model.Cart.Info.ExternalId
+    </div>
+    <div>
+        <strong>UserId:</strong>
+        @Model.Cart.Info.UserId
+    </div>
+</div>
+

@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace SitecoreCoffee.Feature.Commerce.Repositories
 {
-    public class CommerceCartRepository
+    public class CommerceCartRepository : ICommerceCartRepository
     {
         /// <summary>
         /// Cart service provider

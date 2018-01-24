@@ -1,0 +1,14 @@
+﻿---
+ID: "6c80301a-5006-47a5-ac62-dcca38bbc711"
+Parent: "ecae1fb1-9685-44f7-87eb-4bef06ed6dab"
+Template: "c3b037a0-46e5-4b67-ac7a-a144b962a56f"
+Path: /sitecore/layout/Placeholder Settings/Project/Common
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20180124T005649Z
