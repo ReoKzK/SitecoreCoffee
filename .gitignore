@@ -6,6 +6,5 @@ obj/
 *.suo
 *.user
 *.dll
-*.targets
 
 node_modules/
