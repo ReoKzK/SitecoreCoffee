@@ -1,11 +1,17 @@
 ﻿@model SitecoreCoffee.Feature.Commerce.ViewModel.CartAddViewModel
 
-<div>
-    @using (Html.BeginForm("AddToCart", "Cart", FormMethod.Post))
-    {
-        <label>Product name:</label>
-        <div>@Html.TextBoxFor(x => x.ProductId)</div>
-        <div><input type="submit" value="Add"></div>
-    }
-</div>
+@using (Html.BeginForm("AddToCart", "Cart", FormMethod.Post))
+{
+    <h6>Product name:</h6>
+
+    <div class="row">
+        <div class="col-md-10 mb-3">
+            @Html.TextBoxFor(x => x.ProductId, new { @class = "form-control" })
+        </div>
+        <div class="col-md-2 mb-3">
+            <input type="submit" value="Add" class="btn btn-primary btn-block">
+        </div>
+    </div>
+
+}
 

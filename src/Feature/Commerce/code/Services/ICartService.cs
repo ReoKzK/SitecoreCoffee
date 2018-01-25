@@ -8,6 +8,6 @@ namespace SitecoreCoffee.Feature.Commerce.Services
 
         Cart AddToCart(string productId, uint quantity = 1);
 
-        Cart IdenfifyContactInCart(string email);
+        Cart IdenfifyContactInCart(string email, bool replaceExistingUserCart = false);
     }
 }

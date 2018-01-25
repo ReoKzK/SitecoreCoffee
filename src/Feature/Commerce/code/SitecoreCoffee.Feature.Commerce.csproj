@@ -136,6 +136,9 @@
     <Compile Include="Repositories\EaStateCartRepository.cs" />
     <Compile Include="Repositories\ICommerceCartRepository.cs" />
     <Compile Include="Services\CartService.cs" />
+    <Compile Include="Services\Commerce\CartManipulationsService.cs" />
+    <Compile Include="Services\Commerce\CartServiceProvider.cs" />
+    <Compile Include="Services\Commerce\ICartManipulationsService.cs" />
     <Compile Include="Services\ContactService.cs" />
     <Compile Include="Services\ICartService.cs" />
     <Compile Include="Services\IContactService.cs" />

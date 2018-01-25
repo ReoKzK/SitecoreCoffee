@@ -10,6 +10,6 @@ namespace SitecoreCoffee.Feature.Commerce.Mediators
 
         MediatorResponse<CartViewModel> AddToCart(string productId, uint quantity);
 
-        MediatorResponse<CartViewModel> IdenfifyContactInCart(string email);
+        MediatorResponse<CartViewModel> IdenfifyContactInCart(string email, bool replaceExistingUserCart = false);
     }
 }

@@ -105,7 +105,27 @@
       <SubType>Designer</SubType>
     </Content>
     <None Include="Properties\PublishProfiles\Local.pubxml" />
+    <Content Include="Theme\vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="Theme\vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="Theme\vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="Theme\vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="Theme\vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="Theme\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Theme\vendor\bootstrap\js\bootstrap.bundle.js" />
+    <Content Include="Theme\vendor\bootstrap\js\bootstrap.bundle.min.js" />
+    <Content Include="Theme\vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="Theme\vendor\bootstrap\js\bootstrap.min.js" />
     <Content Include="Views\Layouts\Common\Website.cshtml" />
+    <Content Include="Theme\vendor\bootstrap\css\bootstrap-grid.css.map" />
+    <Content Include="Theme\vendor\bootstrap\css\bootstrap-grid.min.css.map" />
+    <Content Include="Theme\vendor\bootstrap\css\bootstrap-reboot.css.map" />
+    <Content Include="Theme\vendor\bootstrap\css\bootstrap-reboot.min.css.map" />
+    <Content Include="Theme\vendor\bootstrap\css\bootstrap.css.map" />
+    <Content Include="Theme\vendor\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="Theme\vendor\bootstrap\js\bootstrap.bundle.js.map" />
+    <Content Include="Theme\vendor\bootstrap\js\bootstrap.bundle.min.js.map" />
+    <Content Include="Theme\vendor\bootstrap\js\bootstrap.js.map" />
+    <Content Include="Theme\vendor\bootstrap\js\bootstrap.min.js.map" />
     <None Include="\README.md" />
   </ItemGroup>
   <ItemGroup>

@@ -1,10 +1,10 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Sitecore.Commerce.Contacts;
-using Sitecore.Commerce.Services.Carts;
 using Sitecore.DependencyInjection;
 using SitecoreCoffee.Feature.Commerce.Mediators;
 using SitecoreCoffee.Feature.Commerce.Repositories;
 using SitecoreCoffee.Feature.Commerce.Services;
+using SitecoreCoffee.Feature.Commerce.Services.Commerce;
 
 namespace SitecoreCoffee.Feature.Commerce.DI
 {
@@ -17,6 +17,7 @@ namespace SitecoreCoffee.Feature.Commerce.DI
 
             serviceCollection.AddTransient<ICartMediator, CartMediator>();
             serviceCollection.AddTransient<ICartService, CartService>();
+            serviceCollection.AddTransient<ICartManipulationsService, CartManipulationsService>();
             serviceCollection.AddTransient<IContactService, ContactService>();
             serviceCollection.AddTransient<ICommerceCartRepository, CommerceCartRepository>();
         }

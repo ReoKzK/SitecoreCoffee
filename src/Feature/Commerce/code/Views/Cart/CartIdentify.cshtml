@@ -1,11 +1,23 @@
 ﻿@model SitecoreCoffee.Feature.Commerce.ViewModel.CartIdentifyViewModel
 
-<div>
-    @using (Html.BeginForm("Identify", "Cart", FormMethod.Post, new { @class = "identify-form", style = "border: 1px;" }))
-    {
-        <label>Identify as:</label>
-        <div>@Html.TextBoxFor(x => x.Email)</div>
-        <div><input type="submit" value="Identify"></div>
-    }
-</div>
+@using (Html.BeginForm("Identify", "Cart", FormMethod.Post, new { @class = "identify-form", style = "border: 1px;" }))
+{
+    <h6>Identify as:</h6>
+
+    <div class="row">
+        <div class="col-md-10 mb-3 align-top">
+            @Html.TextBoxFor(x => x.Email, new { @class = "form-control" })
+            <div class="custom-control custom-checkbox">
+                @Html.CheckBoxFor(x => x.ReplaceExistingUserCart, new { @class = "custom-control-input" })
+                @Html.LabelFor(x => x.ReplaceExistingUserCart, new { @class = "custom-control-label" })
+                
+            </div>
+            
+        </div>
+        <div class="col-md-2 mb-3 align-top">
+            <input type="submit" value="Identify" class="btn btn-primary btn-block">
+        </div>
+    </div>
+}
+
 

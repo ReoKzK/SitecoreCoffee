@@ -36,27 +36,27 @@ namespace SitecoreCoffee.Feature.Commerce.Controllers
             switch (mediatorResponse.Code)
             {
                 case MediatorCodes.CartMediator.AddToCart.Ok:
-                    return RedirectToAction("CartListing");
+                    return Redirect("/cart");
 
                 case MediatorCodes.CartMediator.AddToCart.Fail:
                 default:
-                    return RedirectToAction("CartListing");
+                    return Redirect("/cart");
             }
         }
 
         [HttpPost]
         public ActionResult Identify(CartIdentifyViewModel viewmodel)
         {
-            var mediatorResponse = _cartMediator.IdenfifyContactInCart(viewmodel.Email);
+            var mediatorResponse = _cartMediator.IdenfifyContactInCart(viewmodel.Email, viewmodel.ReplaceExistingUserCart);
 
             switch (mediatorResponse.Code)
             {
                 case MediatorCodes.CartMediator.IdenfifyContactInCart.Ok:
-                    return RedirectToAction("CartListing");
+                    return Redirect("/cart");
 
                 case MediatorCodes.CartMediator.IdenfifyContactInCart.Fail:
                 default:
-                    return RedirectToAction("CartListing");
+                    return Redirect("/cart");
             }
         }
     }

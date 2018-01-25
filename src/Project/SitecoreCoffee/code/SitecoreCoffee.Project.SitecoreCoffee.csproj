@@ -121,7 +121,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Config\Include\Project\SitecoreCoffee.Project.SitecoreCoffee.config" />
-    <None Include="App_Config\Include\Project\SitecoreCoffee.Project.SitecoreCoffee.Serialization.config" />
+    <Content Include="App_Config\Include\Project\SitecoreCoffee.Project.SitecoreCoffee.Serialization.config" />
     <Content Include="App_Config\Include\Rainbow.config" />
     <None Include="Properties\PublishProfiles\Local.pubxml">
       <SubType>Designer</SubType>

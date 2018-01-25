@@ -1,0 +1,18 @@
+﻿---
+ID: "b65737ec-3a3b-43cc-a8dd-9b67450d708e"
+Parent: "62f64df8-74f0-4cf3-911f-7a614269e971"
+Template: "2fa64a4f-893c-4b8a-b5ab-f8c9739426a5"
+Path: /sitecore/content/SitecoreCoffee/Home
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20180125T200905Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin

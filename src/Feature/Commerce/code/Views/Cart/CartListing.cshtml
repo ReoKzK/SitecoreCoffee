@@ -1,45 +1,63 @@
 ﻿@model SitecoreCoffee.Feature.Commerce.ViewModel.CartViewModel
 
-<div>
-    <header>
-        <h1>Cart info</h1>
-    </header>
-    <div>
-        <strong>Name:</strong>
-        @Model.Cart.Name
-    </div>
-    <div>
-        <strong>TotalAmount:</strong>
-        @Model.Cart.TotalAmount
-    </div>
-    <div>
-        <strong>IsPopulated:</strong>
-        @Model.Cart.IsPopulated
-    </div>
-    <div>
-        <strong>Products: @Model.Cart.Products.Count</strong>
-
-        @foreach (var product in Model.Cart.Products)
-        {
-            <div style="border: 1px solid; padding: 4px;">
-                <div><strong>Id:</strong> @product.Id</div>
-                <div><strong>Name:</strong> @product.Name</div>
-                <div><strong>Price:</strong> @product.Price</div>
-                <div><strong>Sku:</strong> @product.Sku</div>
-            </div>
-        }
-    </div>
-    <div>
-        <strong>ShopName:</strong>
-        @Model.Cart.Info.ShopName
-    </div>
-    <div>
-        <strong>ExternalId:</strong>
-        @Model.Cart.Info.ExternalId
-    </div>
-    <div>
-        <strong>UserId:</strong>
-        @Model.Cart.Info.UserId
-    </div>
+<div class="py-5 text-center">
+    <h1>Sitecore Commerce Connect</h1>
+    <h4>Cart playground</h4>
 </div>
 
+<div class="row pb-5">
+    
+    <div class="col-md-4 order-md-2 mb-4">
+        <h4 class="d-flex justify-content-between align-items-center mb-3">
+            <span class="text-muted">Products: </span>
+            <span class="badge badge-secondary badge-pill">@Model.Cart.Products.Count</span>
+        </h4>
+
+        <ul class="list-group mb-3">
+            @foreach (var product in Model.Cart.Products)
+            {
+                <li class="list-group-item d-flex justify-content-between lh-condensed">
+                    <div>
+                        <strong>Id:</strong> @product.Id <br/>
+                        <strong>Name:</strong> @product.Name <br />
+                        <strong>Sku:</strong> @product.Sku
+                    </div>
+                    <span class="text-muted">@product.Price</span>
+                </li>
+            }
+        </ul>
+    </div>
+    
+    <div class="col-md-8 order-md-1">
+        <h4 class="d-flex justify-content-between align-items-center mb-3">
+            <span class="text-muted">Cart info</span>
+        </h4>
+
+        <div class="row border-bottom border-top">
+            <div class="col-md-4 font-weight-bold">Name:</div>
+            <div class="col-md-8">@Model.Cart.Name</div>
+        </div>
+        <div class="row border-bottom">
+            <div class="col-md-4 font-weight-bold">TotalAmount:</div>
+            <div class="col-md-8">@Model.Cart.TotalAmount</div>
+        </div>
+        <div class="row border-bottom">
+            <div class="col-md-4 font-weight-bold">IsPopulated:</div>
+            <div class="col-md-8">@Model.Cart.IsPopulated</div>
+        </div>
+        <div class="row border-bottom">
+            <div class="col-md-4 font-weight-bold">ShopName:</div>
+            <div class="col-md-8">@Model.Cart.Info.ShopName</div>
+        </div>
+        <div class="row border-bottom">
+            <div class="col-md-4 font-weight-bold">ExternalId:</div>
+            <div class="col-md-8">@Model.Cart.Info.ExternalId</div>
+        </div>
+        <div class="row border-bottom">
+            <div class="col-md-4 font-weight-bold">UserId:</div>
+            <div class="col-md-8">@Model.Cart.Info.UserId</div>
+        </div>
+        
+    </div>
+
+</div>

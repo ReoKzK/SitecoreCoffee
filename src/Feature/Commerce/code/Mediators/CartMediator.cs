@@ -36,9 +36,9 @@ namespace SitecoreCoffee.Feature.Commerce.Mediators
             return GetMediatorResponse<CartViewModel>(MediatorCodes.CartMediator.AddToCart.Ok, viewModel);
         }
 
-        public MediatorResponse<CartViewModel> IdenfifyContactInCart(string email)
+        public MediatorResponse<CartViewModel> IdenfifyContactInCart(string email, bool replaceExistingUserCart = false)
         {
-            var cart = _cartService.IdenfifyContactInCart(email);
+            var cart = _cartService.IdenfifyContactInCart(email, replaceExistingUserCart);
 
             var viewModel = new CartViewModel()
             {

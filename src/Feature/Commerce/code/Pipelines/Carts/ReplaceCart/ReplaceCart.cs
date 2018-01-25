@@ -1,8 +1,9 @@
 ﻿using Sitecore.Commerce;
 using Sitecore.Commerce.Pipelines;
-using Sitecore.Commerce.Services.Carts;
 using Sitecore.Diagnostics;
 using System.Collections.ObjectModel;
+using Sitecore.Commerce.Services.Carts;
+using CartServiceProvider = SitecoreCoffee.Feature.Commerce.Services.Commerce.CartServiceProvider;
 
 namespace SitecoreCoffee.Feature.Commerce.Pipelines.Carts.ReplaceCart
 {

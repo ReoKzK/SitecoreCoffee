@@ -1,8 +1,9 @@
 ﻿using Sitecore.Commerce.Contacts;
 using Sitecore.Commerce.Entities.Carts;
-using Sitecore.Commerce.Services.Carts;
 using Sitecore.Diagnostics;
 using System.Linq;
+using Sitecore.Commerce.Services.Carts;
+using CartServiceProvider = SitecoreCoffee.Feature.Commerce.Services.Commerce.CartServiceProvider;
 
 namespace SitecoreCoffee.Feature.Commerce.Repositories
 {
