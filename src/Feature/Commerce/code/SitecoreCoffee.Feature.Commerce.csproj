@@ -129,6 +129,8 @@
     <Compile Include="Models\Cart.cs" />
     <Compile Include="Models\CartInternalInfo.cs" />
     <Compile Include="Models\Product.cs" />
+    <Compile Include="Pipelines\Carts\ReplaceCart\ReplaceCart.cs" />
+    <Compile Include="Pipelines\Carts\ReplaceCart\ReplaceCartRequest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\CommerceCartRepository.cs" />
     <Compile Include="Repositories\EaStateCartRepository.cs" />
