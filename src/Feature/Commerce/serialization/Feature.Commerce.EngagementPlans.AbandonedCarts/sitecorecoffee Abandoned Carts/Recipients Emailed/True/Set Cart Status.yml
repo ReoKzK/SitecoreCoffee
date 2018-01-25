@@ -1,0 +1,38 @@
+﻿---
+ID: "df69db78-33dc-4b58-869d-503cf19b7641"
+Parent: "e79cc42e-89ee-4691-818d-3cf2c2e3da3f"
+Template: "8c5ead00-5f68-4310-ab0c-84f283b5ee0a"
+Path: /sitecore/system/Marketing Control Panel/Engagement Plans/sitecorecoffee Abandoned Carts/Recipients Emailed/True/Set Cart Status
+DB: master
+BranchID: "8c90e12f-4e2e-4e3d-9137-b2d5f5dd40c0"
+SharedFields:
+- ID: "1507131d-cee3-49e9-af32-de5403a37b49"
+  Hint: Parameters
+  Value: Cart Status=Abandoned
+- ID: "3f72bc07-de92-483e-a724-d430769d9ba4"
+  Hint: Designer ID
+  Value: "92edbc9e-c80d-441c-9bc5-4b58c9dabfc4"
+- ID: "7642ed71-348b-4b88-8634-cc7b28949472"
+  Hint: Origin ID
+  Value: "9aae195b-9d00-4804-b8c6-33a333b3941f"
+- ID: "a291a22b-99e2-46bb-a27b-8ec744275396"
+  Hint: Type
+  Value: Sitecore.Commerce.Automation.MarketingAutomation.AutomationActions.SetCartStatusAction, Sitecore.Commerce
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 0
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{22C80FE0-8A97-4DCD-9293-98C1613CB313}"
+Languages:
+- Language: en
+  Fields:
+  - ID: "06f2d72a-1924-4b9a-ba1e-186ce4e57efd"
+    Hint: Description
+    Value: Sets cart status
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20180125T125341Z

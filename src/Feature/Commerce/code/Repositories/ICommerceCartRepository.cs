@@ -11,5 +11,7 @@ namespace SitecoreCoffee.Feature.Commerce.Repositories
         bool DeleteCart();
         Cart GetCart();
         Cart LockCart();
+
+        Cart EnsureCorrectCartUserId(Cart cart);
     }
 }

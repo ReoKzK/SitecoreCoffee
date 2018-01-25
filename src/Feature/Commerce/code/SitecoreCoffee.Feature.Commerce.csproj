@@ -55,6 +55,15 @@
     <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=1.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>..\..\..\..\packages\Microsoft.Extensions.DependencyInjection.Abstractions.1.0.0\lib\netstandard1.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
     </Reference>
+    <Reference Include="Sitecore.Analytics, Version=10.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\Sitecore.Analytics.NoReferences.8.2.171121\lib\NET452\Sitecore.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Analytics.Automation, Version=10.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\Sitecore.Analytics.Automation.NoReferences.8.2.171121\lib\NET452\Sitecore.Analytics.Automation.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Analytics.Model, Version=10.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\Sitecore.Analytics.Model.NoReferences.8.2.171121\lib\NET452\Sitecore.Analytics.Model.dll</HintPath>
+    </Reference>
     <Reference Include="Sitecore.Commerce, Version=8.2.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\..\..\packages\Sitecore.Commerce.NoReferences.8.2.171121\lib\NET452\Sitecore.Commerce.dll</HintPath>
     </Reference>
@@ -106,6 +115,8 @@
   <ItemGroup>
     <Content Include="App_Config\Include\Feature\SitecoreCoffee.Feature.Commerce.config" />
     <Content Include="App_Config\Include\Feature\SitecoreCoffee.Feature.Commerce.Serialization.config" />
+    <Content Include="App_Config\Include\Feature\SitecoreCoffee.Feature.RegisterPipelines.config" />
+    <Content Include="App_Config\Include\Feature\SitecoreCoffee.Feature.Carts.config" />
     <None Include="Properties\PublishProfiles\Local.pubxml" />
   </ItemGroup>
   <ItemGroup>
@@ -120,19 +131,32 @@
     <Compile Include="Models\Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\CommerceCartRepository.cs" />
+    <Compile Include="Repositories\EaStateCartRepository.cs" />
     <Compile Include="Repositories\ICommerceCartRepository.cs" />
     <Compile Include="Services\CartService.cs" />
+    <Compile Include="Services\ContactService.cs" />
     <Compile Include="Services\ICartService.cs" />
+    <Compile Include="Services\IContactService.cs" />
     <Compile Include="Templates.cs" />
+    <Compile Include="ViewModel\CartIdentifyViewModel.cs" />
+    <Compile Include="ViewModel\CartAddViewModel.cs" />
     <Compile Include="ViewModel\CartViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Cart\CartListing.cshtml" />
+    <Content Include="Views\Cart\CartAdd.cshtml" />
+    <Content Include="Views\Cart\CartIdentify.cshtml" />
     <None Include="Views\web.config" />
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Commerce\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Foundation\Logging\code\SitecoreCoffee.Foundation.Logging.csproj">
+      <Project>{6d05cea1-f3c4-4889-b8a7-68fd4a2e5c0f}</Project>
+      <Name>SitecoreCoffee.Foundation.Logging</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

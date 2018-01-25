@@ -1,0 +1,11 @@
+﻿@model SitecoreCoffee.Feature.Commerce.ViewModel.CartAddViewModel
+
+<div>
+    @using (Html.BeginForm("AddToCart", "Cart", FormMethod.Post))
+    {
+        <label>Product name:</label>
+        <div>@Html.TextBoxFor(x => x.ProductId)</div>
+        <div><input type="submit" value="Add"></div>
+    }
+</div>
+

@@ -1,6 +1,9 @@
 ﻿@model SitecoreCoffee.Feature.Commerce.ViewModel.CartViewModel
 
 <div>
+    <header>
+        <h1>Cart info</h1>
+    </header>
     <div>
         <strong>Name:</strong>
         @Model.Cart.Name
@@ -15,12 +18,14 @@
     </div>
     <div>
         <strong>Products: @Model.Cart.Products.Count</strong>
-        
+
         @foreach (var product in Model.Cart.Products)
         {
-            <div>
-                <p>@product.Name</p>
-                <p>@product.Price</p>
+            <div style="border: 1px solid; padding: 4px;">
+                <div><strong>Id:</strong> @product.Id</div>
+                <div><strong>Name:</strong> @product.Name</div>
+                <div><strong>Price:</strong> @product.Price</div>
+                <div><strong>Sku:</strong> @product.Sku</div>
             </div>
         }
     </div>

@@ -21,7 +21,7 @@ namespace SitecoreCoffee.Feature.Commerce.Repositories
         /// <summary>
         /// The shop name.
         /// </summary>
-        private string _shopName;
+        private string _shopName = "SitecoreCoffee";
 
         /// <summary>
         /// Gets or sets the name of the shop.
@@ -152,7 +152,7 @@ namespace SitecoreCoffee.Feature.Commerce.Repositories
             return result.Success;
         }
 
-        private Cart EnsureCorrectCartUserId(Cart cart)
+        public Cart EnsureCorrectCartUserId(Cart cart)
         {
             if (cart.UserId != this.UserId)
             {

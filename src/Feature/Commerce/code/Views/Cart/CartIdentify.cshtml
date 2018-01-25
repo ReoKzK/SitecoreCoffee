@@ -1,0 +1,11 @@
+﻿@model SitecoreCoffee.Feature.Commerce.ViewModel.CartIdentifyViewModel
+
+<div>
+    @using (Html.BeginForm("Identify", "Cart", FormMethod.Post, new { @class = "identify-form", style = "border: 1px;" }))
+    {
+        <label>Identify as:</label>
+        <div>@Html.TextBoxFor(x => x.Email)</div>
+        <div><input type="submit" value="Identify"></div>
+    }
+</div>
+

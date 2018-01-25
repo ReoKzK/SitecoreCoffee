@@ -17,6 +17,7 @@ namespace SitecoreCoffee.Feature.Commerce.DI
 
             serviceCollection.AddTransient<ICartMediator, CartMediator>();
             serviceCollection.AddTransient<ICartService, CartService>();
+            serviceCollection.AddTransient<IContactService, ContactService>();
             serviceCollection.AddTransient<ICommerceCartRepository, CommerceCartRepository>();
         }
     }

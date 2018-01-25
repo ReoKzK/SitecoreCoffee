@@ -1,5 +1,6 @@
 ﻿using System.Web.Mvc;
 using SitecoreCoffee.Feature.Commerce.Mediators;
+using SitecoreCoffee.Feature.Commerce.ViewModel;
 
 namespace SitecoreCoffee.Feature.Commerce.Controllers
 {
@@ -24,6 +25,38 @@ namespace SitecoreCoffee.Feature.Commerce.Controllers
                 case MediatorCodes.CartMediator.GetCart.Fail:
                 default:
                     return PartialView();
+            }
+        }
+
+        [HttpPost]
+        public ActionResult AddToCart(CartAddViewModel viewmodel)
+        {
+            var mediatorResponse = _cartMediator.AddToCart(viewmodel.ProductId, 1);
+
+            switch (mediatorResponse.Code)
+            {
+                case MediatorCodes.CartMediator.AddToCart.Ok:
+                    return RedirectToAction("CartListing");
+
+                case MediatorCodes.CartMediator.AddToCart.Fail:
+                default:
+                    return RedirectToAction("CartListing");
+            }
+        }
+
+        [HttpPost]
+        public ActionResult Identify(CartIdentifyViewModel viewmodel)
+        {
+            var mediatorResponse = _cartMediator.IdenfifyContactInCart(viewmodel.Email);
+
+            switch (mediatorResponse.Code)
+            {
+                case MediatorCodes.CartMediator.IdenfifyContactInCart.Ok:
+                    return RedirectToAction("CartListing");
+
+                case MediatorCodes.CartMediator.IdenfifyContactInCart.Fail:
+                default:
+                    return RedirectToAction("CartListing");
             }
         }
     }

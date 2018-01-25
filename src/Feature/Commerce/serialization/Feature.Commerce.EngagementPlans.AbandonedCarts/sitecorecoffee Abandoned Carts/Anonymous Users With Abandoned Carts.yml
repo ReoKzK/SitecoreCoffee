@@ -1,0 +1,35 @@
+﻿---
+ID: "0904461f-0b23-4b11-b238-8b9f774ab9aa"
+Parent: "f7f68fa5-4019-4b88-850e-86be681c1f85"
+Template: "8ce2707a-3742-4a89-933b-065e5be02bc9"
+Path: /sitecore/system/Marketing Control Panel/Engagement Plans/sitecorecoffee Abandoned Carts/Anonymous Users With Abandoned Carts
+DB: master
+BranchID: "8c90e12f-4e2e-4e3d-9137-b2d5f5dd40c0"
+SharedFields:
+- ID: "07ce07cb-078c-415e-8f92-96690babd6c7"
+  Hint: Time interval
+  Value: 0
+- ID: "3f72bc07-de92-483e-a724-d430769d9ba4"
+  Hint: Designer ID
+  Value: "3a570354-6d78-4d07-8222-a5d0b123f203"
+- ID: "7642ed71-348b-4b88-8634-cc7b28949472"
+  Hint: Origin ID
+  Value: "00000000-0000-0000-0000-000000000000"
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{47D58B8F-CCCB-487D-BCB8-7E471D2AD604}"
+Languages:
+- Language: en
+  Fields:
+  - ID: "06f2d72a-1924-4b9a-ba1e-186ce4e57efd"
+    Hint: Description
+    Value: All anonymous customers with abandoned carts are placed to this state.
+  - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
+    Hint: __Display name
+    Value: Anonymous Users With Abandoned Carts
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20180125T125340Z

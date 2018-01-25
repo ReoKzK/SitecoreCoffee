@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.15
+VisualStudioVersion = 15.0.27130.2024
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Feature", "Feature", "{2BFD7FF4-5AAE-495B-B5A6-528011E6834D}"
 EndProject
@@ -14,6 +14,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configuration", "Configurat
 		gulp-config.js = gulp-config.js
 		gulpfile.js = gulpfile.js
 		package.json = package.json
+		publishsettings.targets = publishsettings.targets
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ProductsSearch", "ProductsSearch", "{B6FE30FE-DB8A-4147-920F-9AF3FB4B32CA}"
@@ -67,6 +68,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SitecoreCoffee.Feature.Search", "src\Feature\Search\code\SitecoreCoffee.Feature.Search.csproj", "{06411D0E-5638-4D8B-913F-96D86C925382}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Search", "Search", "{63AEAF28-A6A1-49D9-8B25-929F147C51DA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Logging", "Logging", "{C4A623B2-F4DF-4167-89BD-0BD5F333FE40}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SitecoreCoffee.Foundation.Logging", "src\Foundation\Logging\code\SitecoreCoffee.Foundation.Logging.csproj", "{6D05CEA1-F3C4-4889-B8A7-68FD4A2E5C0F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -122,6 +127,10 @@ Global
 		{06411D0E-5638-4D8B-913F-96D86C925382}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{06411D0E-5638-4D8B-913F-96D86C925382}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{06411D0E-5638-4D8B-913F-96D86C925382}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D05CEA1-F3C4-4889-B8A7-68FD4A2E5C0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D05CEA1-F3C4-4889-B8A7-68FD4A2E5C0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D05CEA1-F3C4-4889-B8A7-68FD4A2E5C0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D05CEA1-F3C4-4889-B8A7-68FD4A2E5C0F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -151,6 +160,8 @@ Global
 		{1923D30F-98F1-46F7-8850-E6FC7B08BE97} = {4C4D4CF1-1CA2-47F3-9737-AD28EA24A33F}
 		{06411D0E-5638-4D8B-913F-96D86C925382} = {63AEAF28-A6A1-49D9-8B25-929F147C51DA}
 		{63AEAF28-A6A1-49D9-8B25-929F147C51DA} = {2BFD7FF4-5AAE-495B-B5A6-528011E6834D}
+		{C4A623B2-F4DF-4167-89BD-0BD5F333FE40} = {FB68DD27-717D-444C-A48C-10EB1F3C4521}
+		{6D05CEA1-F3C4-4889-B8A7-68FD4A2E5C0F} = {C4A623B2-F4DF-4167-89BD-0BD5F333FE40}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {599147B3-A8F9-4A5A-81C3-7E784106BA0E}
