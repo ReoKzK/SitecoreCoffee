@@ -8,9 +8,14 @@ namespace SitecoreCoffee.Feature.Commerce.Repositories
         string UserId { get; }
 
         Cart AddToCart(string productId, uint quantity);
+
         bool DeleteCart();
+
         Cart GetCart();
+
         Cart LockCart();
+
+        void SetCartProperty(string key, object value);
 
         Cart EnsureCorrectCartUserId(Cart cart);
     }

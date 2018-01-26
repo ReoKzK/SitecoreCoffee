@@ -42,10 +42,6 @@
             <div class="col-md-8">@Model.Cart.TotalAmount</div>
         </div>
         <div class="row border-bottom">
-            <div class="col-md-4 font-weight-bold">IsPopulated:</div>
-            <div class="col-md-8">@Model.Cart.IsPopulated</div>
-        </div>
-        <div class="row border-bottom">
             <div class="col-md-4 font-weight-bold">ShopName:</div>
             <div class="col-md-8">@Model.Cart.Info.ShopName</div>
         </div>
@@ -57,7 +53,16 @@
             <div class="col-md-4 font-weight-bold">UserId:</div>
             <div class="col-md-8">@Model.Cart.Info.UserId</div>
         </div>
-        
+
+        <div class="row border-bottom">
+            <div class="col-md-4 font-weight-bold">IsPopulated:</div>
+            <div class="col-md-8">@Model.Cart.Properties.IsPopulated</div>
+        </div>
+        <div class="row border-bottom">
+            <div class="col-md-4 font-weight-bold">VatNumber:</div>
+            <div class="col-md-8">@Model.Cart.Properties.VatNumber</div>
+        </div>
+
     </div>
 
 </div>

@@ -122,11 +122,13 @@
   <ItemGroup>
     <Compile Include="Controllers\CartController.cs" />
     <Compile Include="DI\RegisterContainer.cs" />
+    <Compile Include="Mediators\BaseMediator.cs" />
     <Compile Include="Mediators\CartMediator.cs" />
     <Compile Include="Mediators\ICartMediator.cs" />
     <Compile Include="Mediators\MediatorCodes.cs" />
     <Compile Include="Mediators\MediatorResponse.cs" />
     <Compile Include="Models\Cart.cs" />
+    <Compile Include="Models\CartCustomProperties.cs" />
     <Compile Include="Models\CartInternalInfo.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Pipelines\Carts\ReplaceCart\ReplaceCart.cs" />
@@ -143,6 +145,7 @@
     <Compile Include="Services\ICartService.cs" />
     <Compile Include="Services\IContactService.cs" />
     <Compile Include="Templates.cs" />
+    <Compile Include="ViewModel\CartSetPropertiesViewModel.cs" />
     <Compile Include="ViewModel\CartIdentifyViewModel.cs" />
     <Compile Include="ViewModel\CartAddViewModel.cs" />
     <Compile Include="ViewModel\CartViewModel.cs" />
@@ -151,6 +154,9 @@
     <Content Include="Views\Cart\CartListing.cshtml" />
     <Content Include="Views\Cart\CartAdd.cshtml" />
     <Content Include="Views\Cart\CartIdentify.cshtml" />
+    <Content Include="Views\Cart\SessionAbandon.cshtml" />
+    <Content Include="Views\Cart\CartDelete.cshtml" />
+    <Content Include="Views\Cart\CartSetProperties.cshtml" />
     <None Include="Views\web.config" />
     <Content Include="packages.config" />
   </ItemGroup>

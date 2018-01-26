@@ -9,5 +9,9 @@ namespace SitecoreCoffee.Feature.Commerce.Services
         Cart AddToCart(string productId, uint quantity = 1);
 
         Cart IdenfifyContactInCart(string email, bool replaceExistingUserCart = false);
+
+        bool DeleteCart();
+
+        Cart SetCartProperty(string key, object value);
     }
 }

@@ -153,6 +153,21 @@ namespace SitecoreCoffee.Feature.Commerce.Repositories
             return result.Success;
         }
 
+        public void SetCartProperty(string key, object value)
+        {
+            Cart cart = GetCart();
+
+            if (!cart.Properties.ContainsProperty(key))
+            {
+                cart.Properties.Add(key, value);
+            }
+
+            else
+            {
+                cart.Properties[key] = value;
+            }
+        }
+
         public Cart EnsureCorrectCartUserId(Cart cart)
         {
             if (cart.UserId != this.UserId)

@@ -10,8 +10,8 @@ namespace SitecoreCoffee.Feature.Commerce.Models
 
         public decimal TotalAmount { get; set; }
 
-        public bool IsPopulated { get; set; }
-
+        public CartCustomProperties Properties { get; set; }
+        
         public CartInternalInfo Info { get; set; }
     }
 }

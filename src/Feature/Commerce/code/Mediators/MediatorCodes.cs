@@ -21,6 +21,24 @@
                 public const string Ok = "CartMediator.IdenfifyContactInCart.Ok";
                 public const string Fail = "CartMediator.IdenfifyContactInCart.Fail";
             }
+
+            public static class CartDelete
+            {
+                public const string Ok = "CartMediator.CartDelete.Ok";
+                public const string Fail = "CartMediator.CartDelete.Fail";
+            }
+
+            public static class SetCartProperty
+            {
+                public const string Ok = "CartMediator.SetCartProperty.Ok";
+                public const string Fail = "CartMediator.SetCartProperty.Fail";
+            }
+
+            public static class SessionAbandon
+            {
+                public const string Ok = "CartMediator.SessionAbandon.Ok";
+                public const string Fail = "CartMediator.SessionAbandon.Fail";
+            }
         }
     }
 }

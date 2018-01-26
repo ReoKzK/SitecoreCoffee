@@ -1,0 +1,18 @@
+﻿---
+ID: "5f9d4661-8f71-41ce-aa3d-c09bb0ca1073"
+Parent: "217f2086-3ef9-46da-bdf6-33d23fb69574"
+Template: "99f8905d-4a87-4eb8-9f8b-a9bebfb3add6"
+Path: /sitecore/layout/Renderings/Feature/Commerce/Cart Delete
+DB: master
+SharedFields:
+- ID: "51b435bc-f7b9-478a-9c51-52916af96ff5"
+  Hint: Path
+  Value: /Views/Cart/CartDelete.cshtml
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20180126T114259Z

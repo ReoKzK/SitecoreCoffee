@@ -4,6 +4,32 @@ Parent: "b65737ec-3a3b-43cc-a8dd-9b67450d708e"
 Template: "2d50d9bc-c967-4862-aa26-776a1b59cd8b"
 Path: /sitecore/content/SitecoreCoffee/Home/Cart
 DB: master
+SharedFields:
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Type: layout
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+        <r
+          uid="{65F1482C-C5C5-4D52-A79F-28CA0491609E}"
+          p:after="r[@uid='{D8B337C2-C503-45B7-ABB7-856AB69ADF50}']"
+          s:id="{4F44D3B4-FCB5-483E-811A-D65AEE3F55BD}"
+          s:ph="pagecontent" />
+        <r
+          uid="{62DD846A-D1CC-4346-8604-B0310B3AF8C3}"
+          p:after="r[@uid='{65F1482C-C5C5-4D52-A79F-28CA0491609E}']"
+          s:id="{5F9D4661-8F71-41CE-AA3D-C09BB0CA1073}"
+          s:ph="pagecontent" />
+        <r
+          uid="{769B0A49-12BE-45AF-B857-D20CF905BEF5}"
+          p:after="*[1=2]"
+          s:id="{738F0863-A4E2-4BB4-9140-E5F63579AD53}"
+          s:ph="pagecontent" />
+      </d>
+    </r>
 Languages:
 - Language: en
   Versions:

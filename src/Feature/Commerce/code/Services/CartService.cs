@@ -39,6 +39,19 @@ namespace SitecoreCoffee.Feature.Commerce.Services
             return MapCommerceCart(cart);
         }
 
+        public Cart SetCartProperty(string key, object value)
+        {
+            _commerceCartRepository.SetCartProperty(key, value);
+
+            var cart = _commerceCartRepository.GetCart();
+            return MapCommerceCart(cart);
+        }
+
+        public bool DeleteCart()
+        {
+            return _commerceCartRepository.DeleteCart();
+        }
+
         public Cart IdenfifyContactInCart(string email, bool replaceExistingUserCart = false)
         {
             try
@@ -126,8 +139,13 @@ namespace SitecoreCoffee.Feature.Commerce.Services
                     Sku = "",
                     Price = x.Product?.Price?.Amount ?? decimal.Zero
                 }).ToList(),
-                IsPopulated = cart.GetPropertyValue("IsPopulated")?.ToString() == "1",
 
+                Properties = new CartCustomProperties
+                {
+                    IsPopulated = cart.GetPropertyValue("IsPopulated")?.ToString() == "1",
+                    VatNumber = cart.GetPropertyValue("VatNumber")?.ToString()
+                },
+                
                 Info = new CartInternalInfo()
                 {
                     ExternalId = cart.ExternalId,

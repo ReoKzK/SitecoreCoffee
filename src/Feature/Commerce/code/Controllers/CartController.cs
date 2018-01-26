@@ -59,5 +59,53 @@ namespace SitecoreCoffee.Feature.Commerce.Controllers
                     return Redirect("/cart");
             }
         }
+
+        [HttpPost]
+        public ActionResult SetProperties(CartSetPropertiesViewModel viewmodel)
+        {
+            var mediatorResponse = _cartMediator.SetCartProperty("VatNumber", viewmodel.VatNumber);
+
+            switch (mediatorResponse.Code)
+            {
+                case MediatorCodes.CartMediator.SetCartProperty.Ok:
+                    return Redirect("/cart");
+
+                case MediatorCodes.CartMediator.SetCartProperty.Fail:
+                default:
+                    return Redirect("/cart");
+            }
+        }
+
+        [HttpPost]
+        public ActionResult CartDelete()
+        {
+            var mediatorResponse = _cartMediator.CartDelete();
+
+            switch (mediatorResponse.Code)
+            {
+                case MediatorCodes.CartMediator.CartDelete.Ok:
+                    return Redirect("/cart");
+
+                case MediatorCodes.CartMediator.CartDelete.Fail:
+                default:
+                    return Redirect("/cart");
+            }
+        }
+
+        [HttpPost]
+        public ActionResult SessionAbandon()
+        {
+            var mediatorResponse = _cartMediator.SessionAbandon();
+
+            switch (mediatorResponse.Code)
+            {
+                case MediatorCodes.CartMediator.SessionAbandon.Ok:
+                    return Redirect("/cart");
+
+                case MediatorCodes.CartMediator.SessionAbandon.Fail:
+                default:
+                    return Redirect("/cart");
+            }
+        }
     }
 }

@@ -1,8 +1,8 @@
 ---
-ID: "ff1ff169-7e86-4199-9d91-bb6f8f8575ba"
-Parent: "8f343079-3cc5-4ef7-bc27-32addb46f45e"
-Template: "0437fee2-44c9-46a6-abe9-28858d9fee8c"
-Path: /sitecore/templates/Feature/Banners
+ID: "4ec078d8-8d7a-43c2-bca6-8ae87988fad5"
+Parent: "85d2e7ad-8f8d-4bf3-8151-df7b833f5a9b"
+Template: "7ee0975b-0698-493e-b3a2-0b2ef33d0522"
+Path: /sitecore/layout/Renderings/Feature/Banners
 DB: master
 Languages:
 - Language: en

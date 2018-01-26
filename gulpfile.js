@@ -78,7 +78,7 @@ gulp.task("04-Apply-Xml-Transform", function () {
           stdout: true,
           errorOnFail: true,
           maxcpucount: 0,
-          toolsVersion: 14.0,
+          toolsVersion: 15.0,
           properties: {
             Platform: config.buildPlatform,
             WebConfigToTransform: config.websiteRoot,
@@ -137,7 +137,7 @@ var publishStream = function (stream, dest) {
       stdout: true,
       errorOnFail: true,
       maxcpucount: 0,
-      toolsVersion: 14.0,
+      toolsVersion: 15.0,
       properties: {
         Platform: config.publishPlatform,
         DeployOnBuild: "true",
@@ -185,7 +185,7 @@ gulp.task("Build-Solution", function () {
           stdout: true,
           errorOnFail: true,
           maxcpucount: 0,
-          toolsVersion: 14.0,
+          toolsVersion: 15.0,
           properties: {
             Platform: config.buildPlatform
           }
