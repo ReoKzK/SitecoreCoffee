@@ -26,20 +26,28 @@ namespace SitecoreCoffee.Feature.Commerce.Pipelines.Carts.ReplaceCart
 
             Assert.IsNotNull(replaceCartRequest, "request");
             Assert.IsNotNull(cartResult, "result");
-
-            if (replaceCartRequest.FromCart.Lines.Count > 0)
-            {
-                var lines = replaceCartRequest.FromCart.Lines;
-                replaceCartRequest.ToCart.Lines = new ReadOnlyCollection<Sitecore.Commerce.Entities.Carts.CartLine>(lines);
-            }
-
-            replaceCartRequest.ToCart.Properties = new PropertyCollection();
-
-            foreach (var property in replaceCartRequest.FromCart.Properties)
-            {
-                replaceCartRequest.ToCart.Properties.Add(property);
-            }
             
+            replaceCartRequest.ToCart.Properties = replaceCartRequest.FromCart.Properties;
+            replaceCartRequest.ToCart.Lines = replaceCartRequest.FromCart.Lines;
+            replaceCartRequest.ToCart.Adjustments = replaceCartRequest.FromCart.Adjustments;
+            replaceCartRequest.ToCart.Parties = replaceCartRequest.FromCart.Parties;
+            replaceCartRequest.ToCart.Payment = replaceCartRequest.FromCart.Payment;
+            replaceCartRequest.ToCart.Shipping = replaceCartRequest.FromCart.Shipping;
+
+            replaceCartRequest.ToCart.Total = replaceCartRequest.FromCart.Total;
+
+            replaceCartRequest.ToCart.AccountingCustomerParty = replaceCartRequest.FromCart.AccountingCustomerParty;
+            replaceCartRequest.ToCart.BuyerCustomerParty = replaceCartRequest.FromCart.BuyerCustomerParty;
+            replaceCartRequest.ToCart.CartType = replaceCartRequest.FromCart.CartType;
+            replaceCartRequest.ToCart.CurrencyCode = replaceCartRequest.FromCart.CurrencyCode;
+            replaceCartRequest.ToCart.CustomerId = replaceCartRequest.FromCart.CustomerId;
+            replaceCartRequest.ToCart.Email = replaceCartRequest.FromCart.Email;
+            replaceCartRequest.ToCart.IsLocked = replaceCartRequest.FromCart.IsLocked;
+            replaceCartRequest.ToCart.LoyaltyCardID = replaceCartRequest.FromCart.LoyaltyCardID;
+            replaceCartRequest.ToCart.Name = replaceCartRequest.FromCart.Name;
+            replaceCartRequest.ToCart.ShopName = replaceCartRequest.FromCart.ShopName;
+            replaceCartRequest.ToCart.Status = replaceCartRequest.FromCart.Status;
+
             cartResult.Cart = replaceCartRequest.ToCart;
         }
     }
