@@ -1,8 +1,12 @@
-﻿using Sitecore.Commerce.Contacts;
+﻿using System.Collections.Generic;
+using Sitecore.Commerce.Contacts;
 using Sitecore.Commerce.Entities.Carts;
 using Sitecore.Diagnostics;
 using System.Linq;
 using Sitecore.Commerce.Services.Carts;
+using SitecoreCoffee.Feature.Commerce.Models;
+using SitecoreCoffee.Foundation.Logging;
+using Cart = Sitecore.Commerce.Entities.Carts.Cart;
 using CartServiceProvider = SitecoreCoffee.Feature.Commerce.Services.Commerce.CartServiceProvider;
 
 namespace SitecoreCoffee.Feature.Commerce.Repositories
@@ -18,6 +22,8 @@ namespace SitecoreCoffee.Feature.Commerce.Repositories
         /// Contact factory.
         /// </summary>
         private readonly ContactFactory _contactFactory;
+
+        private readonly ILoggerService _logService;
         
         /// <summary>
         /// The shop name.
@@ -53,10 +59,12 @@ namespace SitecoreCoffee.Feature.Commerce.Repositories
         /// <param name="contactFactory"></param>
         public CommerceCartRepository(
             CartServiceProvider cartServiceProvider,
-            ContactFactory contactFactory)
+            ContactFactory contactFactory,
+            ILoggerService logService)
         {
             _cartServiceProvider = cartServiceProvider;
             _contactFactory = contactFactory;
+            _logService = logService;
         }
 
         /// <summary>
@@ -148,9 +156,44 @@ namespace SitecoreCoffee.Feature.Commerce.Repositories
         {
             Cart cart = GetCart();
             var result = _cartServiceProvider.DeleteCart(new DeleteCartRequest(cart));
-            //_logService.Info($"CommerceCartRepository: Delete cart. Success: {result.Success}");
+
+            _logService.Info($"CommerceCartRepository.DeleteCart: Delete cart '{cart.ExternalId}'. Success: {result.Success}");
 
             return result.Success;
+        }
+
+        public List<CartBase> GetCarts(CartSearchModel search)
+        {
+            var request = new GetCartsRequest(ShopName);
+
+            if (search.UserId != null)
+            {
+                request.UserIds = new[] { search.UserId };
+            }
+
+            if (search.CustomerId != null)
+            {
+                request.CustomerIds = new[] { search.CustomerId };
+            }
+
+            if (search.CartName != null)
+            {
+                request.Names = new[] { search.CartName };
+            }
+
+            if (search.CartStatus != null)
+            {
+                request.Statuses = new[] { search.CartStatus };
+            }
+
+            var result = this._cartServiceProvider.GetCarts(request);
+
+            return result.Carts
+                .OrderBy(c => c.ShopName)
+                .ThenBy(c => c.CustomerId)
+                .ThenBy(c => c.UserId)
+                .ThenBy(c => c.Name)
+                .ToList();
         }
 
         public void SetCartProperty(string key, object value)

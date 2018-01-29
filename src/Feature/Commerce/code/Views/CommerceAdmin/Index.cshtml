@@ -1,0 +1,26 @@
+﻿@model SitecoreCoffee.Feature.Commerce.Models.CartSearchModel
+
+@using (Html.BeginForm("Search", "CommerceAdmin", FormMethod.Post))
+{
+    <div class="row">
+        @Html.LabelFor(x => x.UserId)
+        @Html.TextBoxFor(x => x.UserId)
+    </div>
+
+    <div class="row">
+        @Html.LabelFor(x => x.CustomerId)
+        @Html.TextBoxFor(x => x.CustomerId)
+    </div>
+
+    <div class="row">
+        @Html.LabelFor(x => x.CartName)
+        @Html.TextBoxFor(x => x.CartName)
+    </div>
+
+    <div class="row">
+        @Html.LabelFor(x => x.CartStatus)
+        @Html.TextBoxFor(x => x.CartStatus)
+    </div>
+
+    <input type="submit" value="Search" class="btn btn-primary btn-block">
+}

@@ -1,0 +1,17 @@
+﻿@model SitecoreCoffee.Feature.Commerce.ViewModel.CartCreateViewModel
+
+@using (Html.BeginForm("CartCreate", "Cart", FormMethod.Post))
+{
+    <h6>Create cart:</h6>
+
+    <div class="row">
+        <div class="col-md-10 mb-3">
+            @Html.TextBoxFor(x => x.CartName, new { @class = "form-control" })
+        </div>
+        <div class="col-md-2 mb-3">
+            <input type="submit" value="Create" class="btn btn-warning btn-block">
+        </div>
+    </div>
+
+}
+

@@ -16,6 +16,12 @@
                 public const string Fail = "CartMediator.AddToCart.Fail";
             }
 
+            public static class CartCreate
+            {
+                public const string Ok = "CartMediator.CartCreate.Ok";
+                public const string Fail = "CartMediator.CartCreate.Fail";
+            }
+
             public static class IdenfifyContactInCart
             {
                 public const string Ok = "CartMediator.IdenfifyContactInCart.Ok";
@@ -26,6 +32,12 @@
             {
                 public const string Ok = "CartMediator.CartDelete.Ok";
                 public const string Fail = "CartMediator.CartDelete.Fail";
+            }
+
+            public static class SearchCarts
+            {
+                public const string Ok = "CartMediator.SearchCarts.Ok";
+                public const string Fail = "CartMediator.SearchCarts.Fail";
             }
 
             public static class SetCartProperty

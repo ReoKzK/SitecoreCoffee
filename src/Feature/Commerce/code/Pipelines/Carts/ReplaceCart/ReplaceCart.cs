@@ -1,7 +1,5 @@
-﻿using Sitecore.Commerce;
-using Sitecore.Commerce.Pipelines;
+﻿using Sitecore.Commerce.Pipelines;
 using Sitecore.Diagnostics;
-using System.Collections.ObjectModel;
 using Sitecore.Commerce.Services.Carts;
 using CartServiceProvider = SitecoreCoffee.Feature.Commerce.Services.Commerce.CartServiceProvider;
 

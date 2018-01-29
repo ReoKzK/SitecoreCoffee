@@ -1,0 +1,41 @@
+﻿---
+ID: "238da581-88d4-45f9-9b18-28c92a8c4636"
+Parent: "66d5e463-4af0-4e05-b642-e96477d24a94"
+Template: "2d50d9bc-c967-4862-aa26-776a1b59cd8b"
+Path: /sitecore/content/SitecoreCoffee/Home/Cart/Admin
+DB: master
+SharedFields:
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Type: layout
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+        <r
+          uid="{ABABC57A-91B2-4506-88AC-5E4B553C9646}">
+          <p:d />
+        </r>
+        <r
+          uid="{F51855A5-903B-4434-B550-A31A1E935876}"
+          s:id="{DD2CC380-4DA4-4A6C-997F-264458B9CB46}"
+          s:ph="pagecontent" />
+        <r
+          uid="{9D0AE420-7D41-4D48-9551-C42D89BFE2AB}">
+          <p:d />
+        </r>
+        <r
+          uid="{D8B337C2-C503-45B7-ABB7-856AB69ADF50}">
+          <p:d />
+        </r>
+      </d>
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20180129T231618Z

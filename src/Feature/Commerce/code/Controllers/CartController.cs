@@ -93,6 +93,22 @@ namespace SitecoreCoffee.Feature.Commerce.Controllers
         }
 
         [HttpPost]
+        public ActionResult CartCreate(CartCreateViewModel viewmodel)
+        {
+            var mediatorResponse = _cartMediator.CartCreate(viewmodel.CartName);
+
+            switch (mediatorResponse.Code)
+            {
+                case MediatorCodes.CartMediator.CartCreate.Ok:
+                    return Redirect("/cart");
+
+                case MediatorCodes.CartMediator.CartCreate.Fail:
+                default:
+                    return Redirect("/cart");
+            }
+        }
+
+        [HttpPost]
         public ActionResult SessionAbandon()
         {
             var mediatorResponse = _cartMediator.SessionAbandon();

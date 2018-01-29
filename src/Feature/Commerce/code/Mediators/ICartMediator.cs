@@ -1,4 +1,5 @@
-﻿using SitecoreCoffee.Feature.Commerce.ViewModel;
+﻿using SitecoreCoffee.Feature.Commerce.Models;
+using SitecoreCoffee.Feature.Commerce.ViewModel;
 
 namespace SitecoreCoffee.Feature.Commerce.Mediators
 {
@@ -14,8 +15,12 @@ namespace SitecoreCoffee.Feature.Commerce.Mediators
 
         MediatorResponse<CartViewModel> CartDelete();
 
+        MediatorResponse<CartViewModel> CartCreate(string cartName = "");
+
         MediatorResponse<CartViewModel> SetCartProperty(string key, object value);
 
         MediatorResponse<CartViewModel> SessionAbandon();
+
+        MediatorResponse<CartAdminViewModel> SearchCarts(CartSearchModel search);
     }
 }

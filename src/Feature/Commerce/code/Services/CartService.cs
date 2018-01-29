@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
+using Sitecore.Commerce.Services.Carts;
 using Sitecore.Diagnostics;
 using SitecoreCoffee.Feature.Commerce.Models;
 using SitecoreCoffee.Feature.Commerce.Repositories;
@@ -13,30 +15,33 @@ namespace SitecoreCoffee.Feature.Commerce.Services
         private readonly ICommerceCartRepository _commerceCartRepository;
         private readonly ICartManipulationsService _cartManipulationsService;
         private readonly IContactService _contactService;
+        private readonly IMapperService _mapperService;
         private readonly ILoggerService _logService;
         
         public CartService(
             ICommerceCartRepository commerceCartRepository, 
             IContactService contactService,
             ICartManipulationsService cartManipulationsService,
+            IMapperService mapperService,
             ILoggerService logService)
         {
             _commerceCartRepository = commerceCartRepository;
             _cartManipulationsService = cartManipulationsService;
             _contactService = contactService;
+            _mapperService = mapperService;
             _logService = logService;
         }
 
         public Cart GetCart()
         {
             var cart = _commerceCartRepository.GetCart();
-            return MapCommerceCart(cart);
+            return _mapperService.MapCommerceCart(cart);
         }
 
         public Cart AddToCart(string productId, uint quantity = 1)
         {
             var cart = _commerceCartRepository.AddToCart(productId, quantity);
-            return MapCommerceCart(cart);
+            return _mapperService.MapCommerceCart(cart);
         }
 
         public Cart SetCartProperty(string key, object value)
@@ -44,14 +49,37 @@ namespace SitecoreCoffee.Feature.Commerce.Services
             _commerceCartRepository.SetCartProperty(key, value);
 
             var cart = _commerceCartRepository.GetCart();
-            return MapCommerceCart(cart);
+            return _mapperService.MapCommerceCart(cart);
         }
 
         public bool DeleteCart()
         {
             return _commerceCartRepository.DeleteCart();
         }
+        
+        public List<Cart> GetCarts(CartSearchModel search)
+        {
+            var carts = _commerceCartRepository.GetCarts(search);
+            return carts.Select(x => _mapperService.MapCommerceBaseCart(x)).ToList();
+        }
 
+        public Cart CreateNewCart(string cartName = "")
+        {
+            ////var cart = GetCart();
+
+            //////if (cart.Products.Count > 0)
+            ////{
+            ////    DeleteCart();
+            ////}
+
+            _commerceCartRepository.DeleteCart();
+            var cart = _commerceCartRepository.GetCart();
+
+            _logService.Info($"CartService.CreateCart: Get new cart '{cart.ExternalId}'");
+
+            return _mapperService.MapCommerceCart(cart);
+        }
+        
         public Cart IdenfifyContactInCart(string email, bool replaceExistingUserCart = false)
         {
             try
@@ -123,36 +151,7 @@ namespace SitecoreCoffee.Feature.Commerce.Services
 
             currentCart = _commerceCartRepository.GetCart();
 
-            return MapCommerceCart(currentCart);// this.UpdatePrices(currentCart);
-        }
-        
-        public static Cart MapCommerceCart(Sitecore.Commerce.Entities.Carts.Cart cart)
-        {
-            return new Cart()
-            {
-                Name = cart.Name,
-                TotalAmount = cart.Total?.Amount ?? decimal.Zero,
-                Products = cart.Lines.Select(x => new Product()
-                {
-                    Name = x.Product?.ProductName,
-                    Id = x.Product?.ProductId,
-                    Sku = "",
-                    Price = x.Product?.Price?.Amount ?? decimal.Zero
-                }).ToList(),
-
-                Properties = new CartCustomProperties
-                {
-                    IsPopulated = cart.GetPropertyValue("IsPopulated")?.ToString() == "1",
-                    VatNumber = cart.GetPropertyValue("VatNumber")?.ToString()
-                },
-                
-                Info = new CartInternalInfo()
-                {
-                    ExternalId = cart.ExternalId,
-                    ShopName = cart.ShopName,
-                    UserId = cart.UserId
-                }
-            };
+            return _mapperService.MapCommerceCart(currentCart);// this.UpdatePrices(currentCart);
         }
     }
 }
