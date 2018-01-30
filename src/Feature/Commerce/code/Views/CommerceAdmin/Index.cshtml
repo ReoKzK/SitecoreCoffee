@@ -1,26 +1,40 @@
 ﻿@model SitecoreCoffee.Feature.Commerce.Models.CartSearchModel
 
-@using (Html.BeginForm("Search", "CommerceAdmin", FormMethod.Post))
+<div class="py-5 text-center">
+    <h1>Sitecore Commerce Connect</h1>
+    <h4>Commerce admin</h4>
+</div>
+
+@using (Html.BeginForm("Search", "CommerceAdmin", FormMethod.Post, new { id = "cart-search-form" }))
 {
     <div class="row">
-        @Html.LabelFor(x => x.UserId)
-        @Html.TextBoxFor(x => x.UserId)
+        <div class="col-md-3">
+            @Html.LabelFor(x => x.UserId)
+            @Html.TextBoxFor(x => x.UserId, new { @class = "form-control" })
+        </div>
+        <div class="col-md-3">
+            @Html.LabelFor(x => x.CustomerId)
+            @Html.TextBoxFor(x => x.CustomerId, new { @class = "form-control" })
+        </div>
+        <div class="col-md-3">
+            @Html.LabelFor(x => x.CartName)
+            @Html.TextBoxFor(x => x.CartName, new { @class = "form-control" })
+        </div>
+        <div class="col-md-3">
+            @Html.LabelFor(x => x.CartStatus)
+            @Html.TextBoxFor(x => x.CartStatus, new { @class = "form-control" })
+        </div>
     </div>
 
-    <div class="row">
-        @Html.LabelFor(x => x.CustomerId)
-        @Html.TextBoxFor(x => x.CustomerId)
+    <div class="row pt-4">
+        <div class="col-md-12">
+            <input type="submit" value="Search" class="btn btn-primary btn-block">
+        </div>
     </div>
-
-    <div class="row">
-        @Html.LabelFor(x => x.CartName)
-        @Html.TextBoxFor(x => x.CartName)
-    </div>
-
-    <div class="row">
-        @Html.LabelFor(x => x.CartStatus)
-        @Html.TextBoxFor(x => x.CartStatus)
-    </div>
-
-    <input type="submit" value="Search" class="btn btn-primary btn-block">
+    
 }
+
+<div id="cart-search-result"></div>
+
+<script src="~/Frontend/js/cartSearch.js"></script>    
+

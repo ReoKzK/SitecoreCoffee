@@ -157,6 +157,7 @@
     <Compile Include="ViewModel\CartViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Frontend\js\cartSearch.js" />
     <Content Include="Views\Cart\CartListing.cshtml" />
     <Content Include="Views\Cart\CartAdd.cshtml" />
     <Content Include="Views\Cart\CartIdentify.cshtml" />

@@ -115,6 +115,8 @@
     <Content Include="Theme\vendor\bootstrap\js\bootstrap.bundle.min.js" />
     <Content Include="Theme\vendor\bootstrap\js\bootstrap.js" />
     <Content Include="Theme\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Theme\vendor\jquery\jquery-3.3.1.js" />
+    <Content Include="Theme\vendor\jquery\jquery-3.3.1.min.js" />
     <Content Include="Views\Layouts\Common\Website.cshtml" />
     <Content Include="Theme\vendor\bootstrap\css\bootstrap-grid.css.map" />
     <Content Include="Theme\vendor\bootstrap\css\bootstrap-grid.min.css.map" />
