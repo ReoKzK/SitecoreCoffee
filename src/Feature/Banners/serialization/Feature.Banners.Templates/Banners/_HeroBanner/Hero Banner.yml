@@ -1,0 +1,18 @@
+﻿---
+ID: "76e7524d-960e-4296-ab5b-af152c7354bc"
+Parent: "11832eb7-f0a6-42cf-a7ab-04225b133172"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/Feature/Banners/_HeroBanner/Hero Banner
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20180206T170319Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
