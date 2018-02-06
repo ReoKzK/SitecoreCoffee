@@ -2,8 +2,15 @@
 ID: "ec90ee49-c22d-4563-9646-ee1f2b388bc0"
 Parent: "4ec078d8-8d7a-43c2-bca6-8ae87988fad5"
 Template: "2a3e91a0-7987-44b5-ab34-35c2d9de83b9"
-Path: /sitecore/layout/Renderings/Feature/Banners/Banner
+Path: /sitecore/layout/Renderings/Feature/Banners/Static Banner
 DB: master
+SharedFields:
+- ID: "ded9e431-3604-4921-a4b3-a6ec7636a5b6"
+  Hint: Controller Action
+  Value: Static
+- ID: "e64ad073-dfcc-4d20-8c0b-fe5aa6226cd7"
+  Hint: Controller
+  Value: Banners
 Languages:
 - Language: en
   Versions:
