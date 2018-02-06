@@ -1,8 +1,8 @@
 ﻿---
 ID: "66d5e463-4af0-4e05-b642-e96477d24a94"
-Parent: "b65737ec-3a3b-43cc-a8dd-9b67450d708e"
+Parent: "add90ed5-2428-47f8-92a3-955793d01d29"
 Template: "2d50d9bc-c967-4862-aa26-776a1b59cd8b"
-Path: /sitecore/content/SitecoreCoffee/Home/Cart
+Path: /sitecore/content/SitecoreCoffee/Home/Commerce/Admin/Cart playground
 DB: master
 SharedFields:
 - ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
