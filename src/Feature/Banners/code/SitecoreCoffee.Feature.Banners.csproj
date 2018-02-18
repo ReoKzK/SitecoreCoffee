@@ -45,6 +45,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Castle.Core, Version=3.3.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\Castle.Core.3.3.3\lib\net45\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Glass.Mapper, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\Glass.Mapper.Sc.Core.4.5.0.4\lib\net45\Glass.Mapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Glass.Mapper.Sc">
+      <HintPath>..\..\..\..\packages\Glass.Mapper.Sc.Core.4.5.0.4\lib\100\Glass.Mapper.Sc.dll</HintPath>
+    </Reference>
+    <Reference Include="Glass.Mapper.Sc.Mvc">
+      <HintPath>..\..\..\..\packages\Glass.Mapper.Sc.Core.4.5.0.4\lib\Mvc52\Glass.Mapper.Sc.Mvc.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.8.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\..\..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
@@ -101,7 +113,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\BannersController.cs" />
+    <Compile Include="Models\IHeroBanner.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\BannersService.cs" />
     <Compile Include="Templates.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -109,8 +123,18 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Models\" />
+    <Folder Include="Factories\" />
     <Folder Include="Views\Banners\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Foundation\Logging\code\SitecoreCoffee.Foundation.Logging.csproj">
+      <Project>{6d05cea1-f3c4-4889-b8a7-68fd4a2e5c0f}</Project>
+      <Name>SitecoreCoffee.Foundation.Logging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Foundation\ORM\code\SitecoreCoffee.Foundation.ORM.csproj">
+      <Project>{6ac380e1-7287-4159-a5e7-88bff38b2cc3}</Project>
+      <Name>SitecoreCoffee.Foundation.ORM</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

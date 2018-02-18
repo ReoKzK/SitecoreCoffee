@@ -1,20 +1,16 @@
 ﻿---
-ID: "19c10af8-6f67-4b97-aa6b-4a58d071d5d5"
+ID: "284443fa-6a23-4068-a554-82f2f04db2ae"
 Parent: "4ec078d8-8d7a-43c2-bca6-8ae87988fad5"
 Template: "2a3e91a0-7987-44b5-ab34-35c2d9de83b9"
-Path: /sitecore/layout/Renderings/Feature/Banners/Carousel
+Path: /sitecore/layout/Renderings/Feature/Banners/Single Banner
 DB: master
 SharedFields:
 - ID: "1a7c85e5-dc0b-490d-9187-bb1dbcb4c72f"
   Hint: Datasource Template
-  Value: /sitecore/templates/Project/Common/Content Types/Banners/Carousel
+  Value: /sitecore/templates/Project/Common/Content Types/Banners/Hero Banner
 - ID: "ded9e431-3604-4921-a4b3-a6ec7636a5b6"
   Hint: Controller Action
-  Value: Carousel
-- ID: "e441abe7-2ca3-4640-ae26-3789967925d7"
-  Hint: Compatible Renderings
-  Type: Treelist
-  Value: "{EC90EE49-C22D-4563-9646-EE1F2B388BC0}"
+  Value: SingleBanner
 - ID: "e64ad073-dfcc-4d20-8c0b-fe5aa6226cd7"
   Hint: Controller
   Value: Banners
@@ -25,4 +21,4 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20180206T170936Z
+      Value: 20180207T215112Z

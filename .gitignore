@@ -8,3 +8,5 @@ obj/
 *.dll
 
 node_modules/
+
+*.orig
