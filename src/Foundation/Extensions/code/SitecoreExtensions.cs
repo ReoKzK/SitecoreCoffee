@@ -14,6 +14,9 @@ namespace SitecoreCoffee.Foundation.Extensions
         /// <returns>Sitecore SiteInfo</returns>
         public static SiteInfo GetSite(this Item item)
         {
+            // - Basing on path, item can fall into a couple of sites as some of them have high-level root like /sitecore/content/
+            // - Here we check if item path starts with site root path AND we sort those sites by root path lenght descending
+            // - That gives us the best match.
             return Sitecore.Configuration.Factory.GetSiteInfoList()
                 .Where(x =>
                     item.Paths.FullPath.StartsWith(x.RootPath, StringComparison.InvariantCultureIgnoreCase)
