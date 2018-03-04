@@ -120,14 +120,17 @@
     <None Include="Properties\PublishProfiles\Local.pubxml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Constants.cs" />
     <Compile Include="Controllers\CartController.cs" />
     <Compile Include="Controllers\CommerceAdminController.cs" />
+    <Compile Include="Controllers\CommercePageController.cs" />
     <Compile Include="DI\RegisterContainer.cs" />
     <Compile Include="Mediators\BaseMediator.cs" />
     <Compile Include="Mediators\CartMediator.cs" />
     <Compile Include="Mediators\ICartMediator.cs" />
     <Compile Include="Mediators\MediatorCodes.cs" />
     <Compile Include="Mediators\MediatorResponse.cs" />
+    <Compile Include="Models\CarPartsShop\HeartbeatResponse.cs" />
     <Compile Include="Models\Cart.cs" />
     <Compile Include="Models\CartCustomProperties.cs" />
     <Compile Include="Models\CartInternalInfo.cs" />
@@ -139,6 +142,8 @@
     <Compile Include="Repositories\CommerceCartRepository.cs" />
     <Compile Include="Repositories\EaStateCartRepository.cs" />
     <Compile Include="Repositories\ICommerceCartRepository.cs" />
+    <Compile Include="Services\CarPartsShop\ICarPartsShopSystemService.cs" />
+    <Compile Include="Services\CarPartsShop\CarPartsShopSystemService.cs" />
     <Compile Include="Services\CartService.cs" />
     <Compile Include="Services\Commerce\CartManipulationsService.cs" />
     <Compile Include="Services\Commerce\CartServiceProvider.cs" />
@@ -174,6 +179,10 @@
     <Folder Include="Views\Commerce\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Foundation\Infrastructure\code\SitecoreCoffee.Foundation.Infrastructure.csproj">
+      <Project>{1923D30F-98F1-46F7-8850-E6FC7B08BE97}</Project>
+      <Name>SitecoreCoffee.Foundation.Infrastructure</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\Foundation\Logging\code\SitecoreCoffee.Foundation.Logging.csproj">
       <Project>{6d05cea1-f3c4-4889-b8a7-68fd4a2e5c0f}</Project>
       <Name>SitecoreCoffee.Foundation.Logging</Name>
