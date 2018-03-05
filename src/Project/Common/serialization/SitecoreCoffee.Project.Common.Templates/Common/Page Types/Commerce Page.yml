@@ -1,13 +1,13 @@
 ﻿---
-ID: "2d50d9bc-c967-4862-aa26-776a1b59cd8b"
+ID: "659adcde-a730-4475-a8f3-2e6b83d7cf43"
 Parent: "a9da0feb-7dc8-45f8-bb91-1bc65928baa8"
 Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
-Path: /sitecore/templates/Project/Common/Page Types/General Page
+Path: /sitecore/templates/Project/Common/Page Types/Commerce Page
 DB: master
 SharedFields:
 - ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
   Hint: __Icon
-  Value: Applications/32x32/document_text.png
+  Value: Business/32x32/shoppingcart.png
 - ID: "12c33f3f-86c5-43a5-aeb4-5598cec45116"
   Hint: __Base template
   Type: tree list
@@ -16,7 +16,7 @@ SharedFields:
     {A2487F67-F67D-4768-A814-3582B6C6B889}
 - ID: "f7d48a55-2158-4f02-9356-756654404f73"
   Hint: __Standard values
-  Value: "{DE240F97-4F1B-4A88-BAC1-028E7DCFB478}"
+  Value: "{BAA0673B-E059-4142-B23C-16F726F306DA}"
 Languages:
 - Language: en
   Versions:
@@ -24,7 +24,7 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20170813T114417Z
+      Value: 20180305T213715Z
     - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
       Hint: __Created by
       Value: |
