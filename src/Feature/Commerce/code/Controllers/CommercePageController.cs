@@ -20,7 +20,7 @@ namespace SitecoreCoffee.Feature.Commerce.Controllers
         {
             var heartbeat = _carPartsShopSystemService.Heartbeat();
 
-            if (!heartbeat.IsAlive)
+            if (!heartbeat.IsAlive && !_contextSwitchingService.IsExperienceEditor)
             {
                 // - External commerce system is dead, so we are showing maintenance page -
 

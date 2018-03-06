@@ -5,6 +5,8 @@ namespace SitecoreCoffee.Foundation.Infrastructure.Services
 {
     public class ContextSwitchingService : IContextSwitchingService
     {
+        public bool IsExperienceEditor => Sitecore.Context.PageMode.IsExperienceEditor;
+
         public void SwitchContextItem(Guid id)
         {
             var itemId = new ID(id);
