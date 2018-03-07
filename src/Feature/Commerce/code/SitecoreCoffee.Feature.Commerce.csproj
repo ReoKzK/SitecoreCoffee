@@ -179,6 +179,10 @@
     <Folder Include="Views\Commerce\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Foundation\Configuration\code\SitecoreCoffee.Foundation.Configuration.csproj">
+      <Project>{0874836E-3D2D-4D0F-ACAB-468CB5A23D9B}</Project>
+      <Name>SitecoreCoffee.Foundation.Configuration</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\Foundation\Infrastructure\code\SitecoreCoffee.Foundation.Infrastructure.csproj">
       <Project>{1923D30F-98F1-46F7-8850-E6FC7B08BE97}</Project>
       <Name>SitecoreCoffee.Foundation.Infrastructure</Name>

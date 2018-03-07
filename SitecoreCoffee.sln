@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.15
+VisualStudioVersion = 15.0.27130.2024
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Feature", "Feature", "{2BFD7FF4-5AAE-495B-B5A6-528011E6834D}"
 EndProject
@@ -94,6 +94,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Metadata", "Metadata", "{21
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SitecoreCoffee.Feature.Metadata", "src\Feature\Metadata\code\SitecoreCoffee.Feature.Metadata.csproj", "{A60874B8-7E4C-4505-9251-13E52F4EEBAF}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configuration", "Configuration", "{ECE84E37-1004-43E4-B9F3-F63DC9D3DE9E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SitecoreCoffee.Foundation.Configuration", "src\Foundation\Configuration\code\SitecoreCoffee.Foundation.Configuration.csproj", "{0874836E-3D2D-4D0F-ACAB-468CB5A23D9B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SitecoreCoffee.Foundation.Configuration.Tests", "src\Foundation\Configuration\tests\SitecoreCoffee.Foundation.Configuration.Tests.csproj", "{EB3C70FB-5798-4A87-8A81-49B4BBEA01AC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -176,6 +182,14 @@ Global
 		{A60874B8-7E4C-4505-9251-13E52F4EEBAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A60874B8-7E4C-4505-9251-13E52F4EEBAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A60874B8-7E4C-4505-9251-13E52F4EEBAF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0874836E-3D2D-4D0F-ACAB-468CB5A23D9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0874836E-3D2D-4D0F-ACAB-468CB5A23D9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0874836E-3D2D-4D0F-ACAB-468CB5A23D9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0874836E-3D2D-4D0F-ACAB-468CB5A23D9B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB3C70FB-5798-4A87-8A81-49B4BBEA01AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB3C70FB-5798-4A87-8A81-49B4BBEA01AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB3C70FB-5798-4A87-8A81-49B4BBEA01AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB3C70FB-5798-4A87-8A81-49B4BBEA01AC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -217,6 +231,9 @@ Global
 		{02895601-70B7-4AA2-A122-AA2EEB88A503} = {186C4414-9B3C-4E16-B494-F8E5E12F8964}
 		{219EF1B8-6038-47B1-9C64-88DA96D2A81C} = {2BFD7FF4-5AAE-495B-B5A6-528011E6834D}
 		{A60874B8-7E4C-4505-9251-13E52F4EEBAF} = {219EF1B8-6038-47B1-9C64-88DA96D2A81C}
+		{ECE84E37-1004-43E4-B9F3-F63DC9D3DE9E} = {FB68DD27-717D-444C-A48C-10EB1F3C4521}
+		{0874836E-3D2D-4D0F-ACAB-468CB5A23D9B} = {ECE84E37-1004-43E4-B9F3-F63DC9D3DE9E}
+		{EB3C70FB-5798-4A87-8A81-49B4BBEA01AC} = {ECE84E37-1004-43E4-B9F3-F63DC9D3DE9E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {599147B3-A8F9-4A5A-81C3-7E784106BA0E}

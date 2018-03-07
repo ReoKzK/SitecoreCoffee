@@ -1,0 +1,17 @@
+---
+ID: "e40f26c9-f6c1-4abf-94ba-7ae99e9ff89b"
+Parent: "A484F034-920D-40EB-A79C-2DAB5ED4BC31"
+Template: "7ee0975b-0698-493e-b3a2-0b2ef33d0522"
+Path: /sitecore/layout/Renderings/Foundation/Configuration
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20170101T00000Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: sitecore\admin

@@ -53,5 +53,11 @@ namespace SitecoreCoffee.Foundation.ORM.Repositories
         {
             return _sitecoreContext.GetCurrentItem<T>(isLazy, inferType);
         }
+
+        public T GetRelativeItem<T>(string query, bool isLazy = true, bool inferType = false)
+            where T : class
+        {
+            return _sitecoreContext.QuerySingleRelative<T>(query, isLazy, inferType);
+        }
     }
 }
