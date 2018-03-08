@@ -1,7 +1,7 @@
 ﻿---
 ID: "238da581-88d4-45f9-9b18-28c92a8c4636"
 Parent: "add90ed5-2428-47f8-92a3-955793d01d29"
-Template: "2d50d9bc-c967-4862-aa26-776a1b59cd8b"
+Template: "659adcde-a730-4475-a8f3-2e6b83d7cf43"
 Path: /sitecore/content/SitecoreCoffee/Home/Commerce/Admin/Cart search
 DB: master
 SharedFields:
@@ -14,21 +14,9 @@ SharedFields:
       <d
         id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
         <r
-          uid="{ABABC57A-91B2-4506-88AC-5E4B553C9646}">
-          <p:d />
-        </r>
-        <r
           uid="{F51855A5-903B-4434-B550-A31A1E935876}"
           s:id="{DD2CC380-4DA4-4A6C-997F-264458B9CB46}"
           s:ph="pagecontent" />
-        <r
-          uid="{9D0AE420-7D41-4D48-9551-C42D89BFE2AB}">
-          <p:d />
-        </r>
-        <r
-          uid="{D8B337C2-C503-45B7-ABB7-856AB69ADF50}">
-          <p:d />
-        </r>
       </d>
     </r>
 Languages:

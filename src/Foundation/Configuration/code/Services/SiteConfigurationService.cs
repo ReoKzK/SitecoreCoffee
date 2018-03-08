@@ -4,8 +4,8 @@ namespace SitecoreCoffee.Foundation.Configuration.Services
 {
     public class SiteConfigurationService : ISiteConfigurationService
     {
-        public static string SiteSettingsQuery =>
-            $"./ancestor-or-self::*[@@templateid='{Constants.RootPageTemplateId}']/*[@@templateid='{Sitecore.Context.Site.Properties["siteSettingsTemplateId"]}']";
+        public static string SiteSettingsQuery => 
+            $"./ancestor-or-self::*[@@templateid='{Constants.RootPageTemplateId.ToString("B").ToUpper()}']/*[@@templateid='{Constants.SiteSettingsTemplateId.ToString("B").ToUpper()}']";
 
         private readonly IContentRepository _contentRepository;
 

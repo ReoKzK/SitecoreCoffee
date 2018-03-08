@@ -1,7 +1,7 @@
 ﻿---
 ID: "66d5e463-4af0-4e05-b642-e96477d24a94"
 Parent: "add90ed5-2428-47f8-92a3-955793d01d29"
-Template: "2d50d9bc-c967-4862-aa26-776a1b59cd8b"
+Template: "659adcde-a730-4475-a8f3-2e6b83d7cf43"
 Path: /sitecore/content/SitecoreCoffee/Home/Commerce/Admin/Cart playground
 DB: master
 SharedFields:
@@ -14,13 +14,23 @@ SharedFields:
       <d
         id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
         <r
-          uid="{65F1482C-C5C5-4D52-A79F-28CA0491609E}"
-          p:after="r[@uid='{D8B337C2-C503-45B7-ABB7-856AB69ADF50}']"
-          s:id="{4F44D3B4-FCB5-483E-811A-D65AEE3F55BD}"
+          uid="{9D7D5139-B194-4F72-B85F-A583E558EFB5}"
+          p:before="*"
+          s:id="{9958378E-BC67-4E57-8DE7-0DB702A890A2}"
+          s:ph="pagecontent" />
+        <r
+          uid="{7129288D-DDE4-4862-9ABE-53E573395C07}"
+          p:after="r[@uid='{9D7D5139-B194-4F72-B85F-A583E558EFB5}']"
+          s:id="{36BB8E86-4931-4635-A0C3-963EAB426981}"
+          s:ph="pagecontent" />
+        <r
+          uid="{17EE4487-27A3-404B-B6F3-636C0DD1FF52}"
+          p:after="r[@uid='{7129288D-DDE4-4862-9ABE-53E573395C07}']"
+          s:id="{95AB14E1-4BAE-4986-90CE-B404025DD58F}"
           s:ph="pagecontent" />
         <r
           uid="{CD68D443-0E2C-45E5-81B6-A04E888786D8}"
-          p:after="r[@uid='{65F1482C-C5C5-4D52-A79F-28CA0491609E}']"
+          p:after="r[@uid='{17EE4487-27A3-404B-B6F3-636C0DD1FF52}']"
           s:id="{68EBEC4B-99B5-4142-84D4-890D1E712820}"
           s:ph="pagecontent" />
         <r
@@ -30,8 +40,13 @@ SharedFields:
           s:ph="pagecontent" />
         <r
           uid="{769B0A49-12BE-45AF-B857-D20CF905BEF5}"
-          p:after="*[1=2]"
+          p:after="r[@uid='{62DD846A-D1CC-4346-8604-B0310B3AF8C3}']"
           s:id="{738F0863-A4E2-4BB4-9140-E5F63579AD53}"
+          s:ph="pagecontent" />
+        <r
+          uid="{65F1482C-C5C5-4D52-A79F-28CA0491609E}"
+          p:after="*[1=2]"
+          s:id="{4F44D3B4-FCB5-483E-811A-D65AEE3F55BD}"
           s:ph="pagecontent" />
       </d>
     </r>

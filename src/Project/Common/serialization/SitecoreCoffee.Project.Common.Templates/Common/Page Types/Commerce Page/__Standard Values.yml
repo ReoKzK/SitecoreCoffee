@@ -11,6 +11,15 @@ SharedFields:
 - ID: "9fb734cc-8952-4072-a2d4-40f890e16f56"
   Hint: __Controller Action
   Value: Index
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Type: layout
+  Value: |
+    <r xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
+        l="{337D7695-6E73-4C25-BC4E-3B3F8BBD7DF7}" />
+    </r>
 Languages:
 - Language: en
   Versions:
