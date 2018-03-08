@@ -8,7 +8,7 @@ SharedFields:
 - ID: "fd50ea84-6fff-4de8-a38f-47e2ab0673b9"
   Hint: MaintenanceModeOn
   Type: Checkbox
-  Value: 
+  Value: 0
 Languages:
 - Language: en
   Versions:

@@ -1,0 +1,18 @@
+﻿---
+ID: "aa296634-ab60-4810-b3d8-ab0a9773c0d4"
+Parent: "20284098-057c-4d08-9745-f2e58e1d7aef"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/Foundation/Configuration/_MaintenanceSettings/Maintenence
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20180308T135845Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
