@@ -1,4 +1,5 @@
-﻿using Glass.Mapper.Sc;
+﻿using System;
+using Glass.Mapper.Sc;
 using Sitecore.Globalization;
 
 namespace SitecoreCoffee.Foundation.ORM.Repositories
@@ -39,6 +40,18 @@ namespace SitecoreCoffee.Foundation.ORM.Repositories
             where T : class
         {
             return _sitecoreContext.GetItem<T>(path, language, isLazy, inferType);
+        }
+
+        public T GetItem<T>(Guid id, bool isLazy = true, bool inferType = false)
+            where T : class
+        {
+            return _sitecoreContext.GetItem<T>(id, Language.Current, isLazy, inferType);
+        }
+
+        public T GetItem<T>(Guid id, Language language, bool isLazy = true, bool inferType = false)
+            where T : class
+        {
+            return _sitecoreContext.GetItem<T>(id, language, isLazy, inferType);
         }
 
         /// <summary>

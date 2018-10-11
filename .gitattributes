@@ -1,12 +1,8 @@
+# Set the default behavior, in case people don't have core.autocrlf set.
 * text=auto
 
-*.bmp binary
-*.dll binary
-*.gif binary
-*.jpg binary
-*.png binary
-*.snk binary
-
+# Explicitly declare text files you want to always be normalized and converted
+# to native line endings on checkout.
 *.ascx text=auto
 *.cd text=auto
 *.cmd text=auto
@@ -40,4 +36,13 @@
 *.xunit text=auto
 *.yml text=auto
 
+# Declare files that will always have CRLF line endings on checkout.
 *.sln text eol=crlf merge=union 
+
+# Denote all files that are truly binary and should not be modified.
+*.bmp binary
+*.dll binary
+*.gif binary
+*.jpg binary
+*.png binary
+*.snk binary
