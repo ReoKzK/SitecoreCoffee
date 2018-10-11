@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27130.2024
+VisualStudioVersion = 15.0.26430.15
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Feature", "Feature", "{2BFD7FF4-5AAE-495B-B5A6-528011E6834D}"
 EndProject
@@ -100,6 +100,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SitecoreCoffee.Foundation.C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SitecoreCoffee.Foundation.Configuration.Tests", "src\Foundation\Configuration\tests\SitecoreCoffee.Foundation.Configuration.Tests.csproj", "{EB3C70FB-5798-4A87-8A81-49B4BBEA01AC}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Diagnostics", "Diagnostics", "{8B34022F-F2C5-41E9-8355-40286CDF7045}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SitecoreCoffee.Foundation.Diagnostics", "src\Foundation\Diagnostics\code\SitecoreCoffee.Foundation.Diagnostics.csproj", "{9E38B72D-0B4D-455C-804A-FE541BF5B04B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -190,6 +194,10 @@ Global
 		{EB3C70FB-5798-4A87-8A81-49B4BBEA01AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EB3C70FB-5798-4A87-8A81-49B4BBEA01AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EB3C70FB-5798-4A87-8A81-49B4BBEA01AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E38B72D-0B4D-455C-804A-FE541BF5B04B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E38B72D-0B4D-455C-804A-FE541BF5B04B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E38B72D-0B4D-455C-804A-FE541BF5B04B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E38B72D-0B4D-455C-804A-FE541BF5B04B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -234,6 +242,8 @@ Global
 		{ECE84E37-1004-43E4-B9F3-F63DC9D3DE9E} = {FB68DD27-717D-444C-A48C-10EB1F3C4521}
 		{0874836E-3D2D-4D0F-ACAB-468CB5A23D9B} = {ECE84E37-1004-43E4-B9F3-F63DC9D3DE9E}
 		{EB3C70FB-5798-4A87-8A81-49B4BBEA01AC} = {ECE84E37-1004-43E4-B9F3-F63DC9D3DE9E}
+		{8B34022F-F2C5-41E9-8355-40286CDF7045} = {FB68DD27-717D-444C-A48C-10EB1F3C4521}
+		{9E38B72D-0B4D-455C-804A-FE541BF5B04B} = {8B34022F-F2C5-41E9-8355-40286CDF7045}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {599147B3-A8F9-4A5A-81C3-7E784106BA0E}
