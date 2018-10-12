@@ -14,11 +14,11 @@ namespace SitecoreCoffee.Feature.Search.Controllers
             _searchService = searchService;
         }
 
-        public ActionResult SearchComponent()
+        public ActionResult SearchComponent(string search = "")
         {
             var items = new List<SearchItem>(); 
            
-            var results = _searchService.SearchItems("SitecoreCoffee_index", "Test");
+            var results = _searchService.SearchItems("search_index", search);
 
             foreach (var item in results)
             {

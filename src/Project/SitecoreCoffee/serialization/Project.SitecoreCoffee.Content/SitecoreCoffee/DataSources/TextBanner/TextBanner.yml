@@ -1,0 +1,18 @@
+﻿---
+ID: "e6f451aa-3fbd-4179-a16b-e95df38bde08"
+Parent: "9cff86e8-2154-49a2-9d69-1e9bce58004f"
+Template: "92d9bbec-21cb-441c-8d22-0fc4c1fe52ae"
+Path: /sitecore/content/SitecoreCoffee/DataSources/TextBanner/TextBanner
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20181004T100249Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin

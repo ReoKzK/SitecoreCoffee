@@ -1,0 +1,18 @@
+﻿---
+ID: "ea5dc868-0693-4a26-8594-33f6dd78ac8d"
+Parent: "85124f8e-8111-4b7b-ad70-94f4a7eb4b96"
+Template: "2bcd7b8b-a28f-4e12-b898-c2098d0855ad"
+Path: /sitecore/content/SitecoreCoffee/DataSources/Modal/Info Modal
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20181004T100240Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin

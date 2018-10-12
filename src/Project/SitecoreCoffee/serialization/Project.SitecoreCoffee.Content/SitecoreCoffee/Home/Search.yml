@@ -1,0 +1,14 @@
+﻿---
+ID: "606023b8-4879-4adf-8e70-c562cb8283c8"
+Parent: "b65737ec-3a3b-43cc-a8dd-9b67450d708e"
+Template: "731e7a34-bd1a-4452-8cb0-f382c2404c0c"
+Path: /sitecore/content/SitecoreCoffee/Home/Search
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20181011T150146Z
